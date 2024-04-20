@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Halaman dengan Sidebar</title>
+  <!-- Include Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Include Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <!-- Include Kanit Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body, h1, h2, h3, h4, h5, h6, p, a, span, button, input, select, textarea {
+      font-family: 'Kanit', sans-serif;
+    }
+
+    .profile-picture {
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      object-fit: cover; 
+    }
+
+
+    .bg-white.p-4.rounded-lg.shadow-md.mb-4.flex.items-center.justify-between div:nth-child(2) {
+      flex-grow: 1;
+    }
+
+
+    .bg-white.w-16.h-16.rounded-full.overflow-hidden.flex.items-center.justify-center.mr-4 {
+      flex-shrink: 0;
+    }
+    .flex-grow {
+      flex-grow: 1;
+    }
+
+    .info-below-border p {
+      font-size: 0.8rem; 
+    }
+
+    .smaller-font {
+      font-size: 0.8rem; 
+    }
+/* 
+    .box-hover:hover {
+      background-color: #546076; 
+    }
+
+    .box-hover:hover h2 {
+      color: white;
+    } */
+
+    .small-font {
+      font-size: 0.8rem; 
+    }
+
+  </style>
+</head>
+<body class="bg-gray-100">
+  <!-- Sidebar -->
+  <div class="flex h-screen bg-white">
+    <div class="w-64 bg-gray-600">
+      <div class="flex items-center justify-center mt-10">
+        <!-- Profile Image -->
+        <div class="w-25 h-25 overflow-hidden flex items-center ml-2 mr-2">
+          <img src="image.png" alt="Profile Picture" class="profile-picture">
+        </div>
+      </div>
+      <nav class="mt-5 ml-2">
+        <a href="#" class="block py-2.5 px-4 text-gray-400 hover:bg-gray-700">
+          <i class="fas fa-home mr-2"></i> Beranda
+        </a>
+        <a href="#" class="block py-2.5 px-4 text-gray-400 hover:bg-gray-700">
+          <i class="far fa-calendar mr-3"></i> Kalender
+        </a>
+        <a href="#" class="block py-2.5 px-4 text-gray-400 hover:bg-gray-700 hover:text-white">
+          <i class="far fa-file-alt mr-4"></i> Jadwal
+        </a>
+        <a href="#" class="block py-2.5 px-4 text-white font-bold hover:bg-gray-700 hover:text-white">
+          <i class="fas fa-user-friends mr-2"></i> Pasien
+        </a>
+        <a href="#" class="block py-2.5 px-4 text-gray-400 hover:bg-gray-700 hover:text-white">
+          <i class="far fa-comments mr-2"></i> Pesan
+        </a>
+        <a href="#" class="block py-2.5 px-4 text-gray-400 hover:bg-gray-700 hover:text-white">
+          <i class="fas fa-bell mr-2"></i> Notifikasi
+        </a>
+        <a href="#" class="block py-2.5 px-4 text-gray-400 hover:bg-gray-700 hover:text-white">
+          <i class="fas fa-cog mr-2"></i> Setting
+        </a>
+      </nav>
+      <!-- Navbar -->
+    </div>
+    <!-- Sidebar End -->
+
+    <!-- Content -->
+    <div class="flex-grow p-10 mt-10">
+      <header class="flex justify-end items-center p-4 absolute top-0 right-0 mr-8">
+        <button class="text-white hover:text-gray-200 mr-4 rounded-full bg-gray-400 p-2 w-10 h-10">
+          <i class="fas fa-search"></i>
+        </button>
+        <button class="text-white hover:text-gray-200 mr-4 rounded-full bg-gray-400 p-2 w-10 h-10">
+          <i class="fas fa-bell"></i>
+        </button>
+        <div class="flex items-center">
+          <div class="w-10 h-10 overflow-hidden flex items-center">
+            <img src="https://via.placeholder.com/150" alt="Profile Picture" class="w-10 h-10 object-cover rounded-full profile-picture">
+          </div>
+          <div class="text-black font-bold ml-2">
+            Dr. Nafisa Hasna <br>
+            <span class="text-gray-400">Dentist</span>
+          </div>
+        </div>
+      </header>
+      <div class="flex flex-col md:flex-row md:space-x-4">
+        <div class="md:w-1/2 md:space-y-4">
+          <div class="font-bold">
+            Pasien > <span class="font-semibold">John Agus</span>
+          </div>
+
+          <div class="bg-gray-100 p-4 rounded-lg shadow-md mb-4 flex items-center justify-between">
+            <div class="bg-white w-16 h-16 rounded-full overflow-hidden flex items-center justify-center mr-4">
+              <img src="https://via.placeholder.com/150" alt="Profile Picture" class="w-10 h-10 object-cover rounded-full profile-picture">
+            </div>
+            <div class="flex-grow">
+              <h3 class="text-lg font-bold">
+                John Agus <span class="font-bold">| 23784</span>
+                <i class="fas fa-phone ml-52 text-gray-500"></i>
+              </h3>
+              <p class="text-gray-500 font-semibold">Pneumoniae</p>
+
+              <hr class="border-b border-gray-300 my-2 w-full" />
+              
+              <div class="flex info-below-border">
+                <div class="w-1/4">
+                  <p class="text-gray-500">Tanggal Lahir</p>
+                  <p class="font-semibold">Des 13, 2000</p>
+                </div>
+                <div class="w-1/4">
+                  <p class="text-gray-500">Alamat</p>
+                  <p class="font-semibold">Yogyakarta</p>
+                </div>
+                <div class="w-1/4">
+                  <p class="text-gray-500">Status</p>
+                  <p class="font-semibold">Single</p>
+                </div>
+                <div class="w-1/4">
+                  <p class="text-gray-500">Asuransi</p>
+                  <p class="font-semibold">BPJS</p>
+                </div>
+              </div>
+              <br />
+
+              <!-- New row -->
+              <div class="flex info-below-border">
+                <div class="w-1/4">
+                  <p class="text-gray-500">Nomor Telepon</p>
+                  <p class="font-semibold">0821-1253-4267</p>
+                </div>
+                <div class="w-1/4">
+                  <p class="text-gray-500">Gender</p>
+                  <p class="font-semibold">Wanita</p>
+                </div>
+                <div class="w-1/4">
+                  <p class="text-gray-500">Bergabung Sejak</p>
+                  <p class="font-semibold">2021</p>
+                </div>
+              </div>
+             
+            </div>
+            
+          </div>
+          
+          <div class="flex justify-between">
+            <div class="w-1/3 ml-12">
+              <div class="bg-gray-100 p-1 rounded-lg shadow-md mb-2 box-hover" style="border-top-right-radius: 0; border-bottom-right-radius: 0 ;">
+                <h2 class="text-lg text-white inline-block rounded-md bg-gray-400 font-semibold mb-1 text-center smaller-font mt-1 ml-1 mr-1">Jadwal yg akan datang</h2>
+              </div>
+            </div>
+            
+            <div class="w-1/3">
+              <div class="bg-gray-100 p-1 rounded-lg shadow-md mb-2 box-hover" style="border-top-left-radius: 0; border-bottom-left-radius: 0; padding-left: 40px; padding-right: 0px;">
+                <h2 class="text-lg font-semibold mb-1 text-center smaller-font mt-1">Riwayat</h2>
+              </div>
+            </div>
+            
+            
+            
+            <div class="w-1/3">
+              <h2 class="text-lg font-semibold mb-2 text-center smaller-font mt-2">
+                <i class="fas fa-file mr-2"></i> Tambah Jadwal
+              </h2>
+            </div>
+            
+          </div>
+          
+          
+          
+          
+
+          <!-- Box Kedua: No, Tanggal, Gejala, Kategori, Dokter, Status -->
+          <div class="bg-gray-100 p-1 rounded-lg shadow-md mb-4"> 
+            <table class="w-full border-collapse">
+              <tr>
+                <th class="border-none p-1 small-font"></th>
+                <th class="border-none p-1 small-font text-left">Tanggal</th>
+                <th class="border-none p-1 small-font text-left font-bold">Gejala</th>
+                <th class="border-none p-1 small-font text-left font-bold">Kategori</th>
+                <th class="border-none p-1 small-font text-left font-bold">Dokter</th>
+                <th class="border-none p-1 small-font text-left font-bold"></th>
+              </tr>
+              <tr>
+                <td class="border-none p-1 small-font text-left font-bold">18 Mon</td>
+                <td class="border-none p-1 small-font text-left">Feb 18, 10 am</td>
+                <td class="border-none p-1 small-font text-left">Demam</td>
+                <td class="border-none p-1 small-font text-left">Follow-up</td>
+                <td class="border-none p-1 small-font text-left">Dr. Nafisa Hasna</td>
+                <td class="border-none p-1 small-font text-left relative">
+                  <span class="inline-block rounded-full bg-gray-400 px-2 py-1 text-white font-bold">
+                    Selesai
+                  </span>
+                </td>
+              </tr>
+            </table>
+          </div>
+          
+          
+
+          <div class="bg-gray-100 p-1 rounded-lg shadow-md mb-4"> 
+            <table class="w-full border-collapse">
+              <tr>
+                <th class="border-none p-1 small-font"></th>
+                <th class="border-none p-1 small-font text-left">Tanggal</th>
+                <th class="border-none p-1 small-font text-left font-bold">Gejala</th>
+                <th class="border-none p-1 small-font text-left font-bold">Kategori</th>
+                <th class="border-none p-1 small-font text-left font-bold">Dokter</th>
+                <th class="border-none p-1 small-font text-left font-bold"></th>
+              </tr>
+              <tr>
+                <td class="border-none p-1 small-font text-left font-bold">18 Mon</td>
+                <td class="border-none p-1 small-font text-left">Feb 18, 10 am</td>
+                <td class="border-none p-1 small-font text-left">Demam</td>
+                <td class="border-none p-1 small-font text-left">Follow-up</td>
+                <td class="border-none p-1 small-font text-left">Dr. Nafisa Hasna</td>
+                <td class="border-none p-1 small-font text-left relative">
+                  <span class="inline-block rounded-full bg-gray-400 px-2 py-1 text-white font-bold">
+                    Selesai
+                  </span>
+                </td>
+              </tr>
+            </table>
+          </div>
+          
+          
+
+        </div>
+
+
+        <div class="md:w-1/3 md:space-y-4 mt-10">
+          <div class="bg-gray-100 p-4 rounded-lg shadow-md mb-4">
+            <h2 class="text-lg font-semibold mb-2 flex justify-between items-center">
+              Dokumen
+              <span class="text-sm text-black"> <i class="far fa-file-alt mr-2 text-black"></i> <!-- Icon File --> Tambah File</span>
+            </h2>
+            <hr class="border-b border-gray-300 mt-4 my-1"> <!-- Garis bawah -->
+            <table class="w-full">
+              <tr>
+                <td class="pb-2 border-b py-3 font-semibold small-font flex justify-between items-center">
+                  <div class="flex items-center">
+                    <i class="far fa-file-alt mr-2 text-black"></i>
+                    Dokumen.pdf
+                  </div>
+                  <span>
+                    <i class="fas fa-save mr-2 text-black"></i> <!-- Icon Simpan -->
+                    <i class="fas fa-ellipsis-v text-black"></i> <!-- Icon Titik Tiga -->
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td class="pb-2 border-b py-3 font-semibold small-font flex justify-between items-center">
+                  <div class="flex items-center">
+                    <i class="far fa-file-alt mr-2 text-black"></i>
+                    X-Ray.pdf
+                  </div>
+                  <span>
+                    <i class="fas fa-save mr-2 text-black"></i> <!-- Icon Simpan -->
+                    <i class="fas fa-ellipsis-v text-black"></i> <!-- Icon Titik Tiga -->
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td class="pb-2 border-b py-3 font-semibold small-font flex justify-between items-center">
+                  <div class="flex items-center">
+                    <i class="far fa-file-alt mr-2 text-black"></i>
+                    Ultra sound.pdf
+                  </div>
+                  <span>
+                    <i class="fas fa-save mr-2 text-black"></i> <!-- Icon Simpan -->
+                    <i class="fas fa-ellipsis-v text-black"></i> <!-- Icon Titik Tiga -->
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3 pb-1 mt-3 text-center font-semibold small-font">See All</td>
+              </tr>
+            </table>
+            
+            
+          </div>
+          
+
+          <div class="bg-gray-100 p-4 rounded-lg shadow-md mb-4">
+            <h2 class="text-lg font-semibold mb-2 flex justify-between items-center">
+              Riwayat Periksa
+              <span class="text-sm text-black"> Tambah</span>
+            </h2>
+            <hr class="border-b border-gray-300 mt-4"> <!-- Garis bawah -->
+            <table class="w-full mt-1">
+              <tr>
+                <td class="pb-2 border-b py-3 small-font flex justify-between items-center">
+                  <div class="flex items-center mt-1 mb-1">
+                    <div class="mr-4">
+                      <span class="border-none p-1 small-font text-left font-semibold">Tanggal</span><br>
+                      <span class="border-none p-1 small-font text-left">Feb 18, 10 am</span>
+                    </div>
+                    <div class="mr-4">
+                      <span class="border-none p-1 small-font text-left font-semibold">Gejala</span><br>
+                      <span class="border-none p-1 small-font text-left">Demam</span>
+                    </div>
+                    <div class="mr-4">
+                      <span class="border-none p-1 small-font text-left font-semibold">Dokter</span><br>
+                      <span class="border-none p-1 small-font text-left">Dr. Nafisa Hasna</span>
+                    </div>
+                  </div>
+                  <span>
+                    <i class="fas fa-save mr-2 text-black"></i> <!-- Icon Simpan -->
+                    <i class="fas fa-ellipsis-v text-black"></i> <!-- Icon Titik Tiga -->
+                  </span>
+                </td>
+              </tr>
+              
+              <tr>
+                <td class="pb-2 border-b py-3 small-font flex justify-between items-center">
+                  <div class="flex items-center mt-1 mb-1">
+                    <div class="mr-4">
+                      <span class="border-none p-1 small-font text-left font-semibold">Tanggal</span><br>
+                      <span class="border-none p-1 small-font text-left">Feb 18, 10 am</span>
+                    </div>
+                    <div class="mr-4">
+                      <span class="border-none p-1 small-font text-left font-semibold">Gejala</span><br>
+                      <span class="border-none p-1 small-font text-left">Demam</span>
+                    </div>
+                    <div class="mr-4">
+                      <span class="border-none p-1 small-font text-left font-semibold">Dokter</span><br>
+                      <span class="border-none p-1 small-font text-left">Dr. Nafisa Hasna</span>
+                    </div>
+                  </div>
+                  <span>
+                    <i class="fas fa-save mr-2 text-black"></i> <!-- Icon Simpan -->
+                    <i class="fas fa-ellipsis-v text-black"></i> <!-- Icon Titik Tiga -->
+                  </span>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="py-3 pb-1 mt-3 text-center font-semibold small-font">See All</td>
+              </tr>
+            </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
