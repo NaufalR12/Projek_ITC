@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: "Kanit", sans-serif;
+}
+
+:root {
+    --cyan: #DFF3FC;
+    --birdong: rgb(54, 79, 107, 0.80);
+    --abu: #F5F5F5;
+    --pink: #FC5185;
+    --abu2: #D9D9D9;
+    --grey1: #333333;
+    --grey2: #4F4F4F;
+    --grey3: #828282;
+    --grey4: #BDBDBD;
+    --grey5: #E0E0E0;
+    --grey6: #7F8290;
+    --black: #000000;
+    --birumuda: #DFF3FC;
+    --red1: #FF0000;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.flexbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    width: 266px;
+    height: 100%;
+    background: var(--birdong);
+}
+
+.sidebar .grupLogo {
+    width: 249px; 
+    height: 64.05px; 
+    left: 8px; 
+    top: 37px;
+}
+
+.sidebar .grupLogo .kotakLogo {
+    width: 249px; 
+    height: 64.05px; 
+    left: 8px; 
+    top: 37px; 
+    position: absolute; 
+    background: var(--cyan); 
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+    border-radius: 8px; 
+}
+
+.sidebar .grupLogo img {
+    width: 249px; 
+    height: 49.62px; 
+    position: absolute;
+    left: 8px; 
+    top: 44.22px; 
+}
+
+.sidebar a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 50px;
+    word-wrap: break-word;
+    font-size: 1.25rem;
+    color: var(--grey6);
+}
+
+.sidebar a i {
+    color: var(--abu);
+}
+
+.sidebar a:hover {
+    color: var(--abu);
+}
+
+.sidebar .menu {
+    position: absolute;
+    left: 43px;
+    top: 150px;
+}
+
+.sidebar .bantuan {
+    position: absolute;
+    left: 43px;
+    bottom: 20px;
+}
+
+.ellips {
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    z-index: 999;
+}
+
+.ellips button {
+    background-color: var(--abu2);
+    border-radius: 50%;
+    border-style: none;
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+}
+
+.Menyapa {
+    position: absolute;
+    top: 100px;
+    left: 315px;
+    background-color: var(--birdong);
+    border-radius: 37px;
+    width: 960px; 
+    height: 354px;
+}
+
+.Menyapa .kehadiran {
+    position: relative;
+    top: 25px;
+    left: 25px;
+    background-color: var(--grey6);
+    border-radius: 37px;
+    width: max-content;
+    height: max-content;
+    padding: 10px 20px 10px 20px;
+}
+
+.Menyapa .kehadiran span {
+    color: var(--abu);
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.Menyapa .kehadiran input[type="checkbox"] {
+    width: 30px;
+    height: 30px;
+    border-color: 1px solid #F5F5F5;
+    vertical-align: middle;
+}
+
+.Menyapa h3 {
+    position: absolute;
+    bottom: 65px;
+    left: 30px;
+    color: var(--abu);
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.Menyapa .kalimatSapaan {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    color: var(--grey4);
+    font-size: 1.2rem;
+}
+
+.Menyapa .KartunDokter img {
+    position: absolute;
+    right: 20px;
+    vertical-align: middle;
+    width: 300px;
+    height: 300px;
+}
+
+.grupKerja {
+    position: absolute;
+    top: 490px;
+    left: 300px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.grupKerja .daring, .grupKerja .luring {
+    background-color: var(--abu);
+    padding: 20px 20px 20px 20px;
+    width: 430px;
+    height: 170px;
+    border-radius: 37px;
+    margin-left: 20px;
+}
+
+.Kerja {
+    font-size: 24px;
+    color: var(--grey6);
+    font-weight: 600;
+    padding-bottom: 20px;
+    margin-left: 20px;
+}
+
+.flexKerja {
+    display: flex;
+    justify-content: left;
+}
+
+.grafikDaring, .grafikLuring {
+    margin-right: 25px;
+}
+
+.pasien .jumlahPasien {
+    font-weight: 600;
+    color: var(--black);
+    font-size: 20px;
+}
+
+.pasien .hari {
+    font-weight: 600;
+    color: var(--grey6);
+    font-size: 20px;
+}
+
+.bioDokter {
+    position: absolute;
+    top: 735px;
+    left: 315px;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--birdong);
+    border-radius: 37px;
+    width: 960px;
+    height: 150px;
+    text-align: left;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.ketNama, .ketTanggal, .ketJam {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.spesialis, .tglBlnThnLahir, .rentangWaktuKerja {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--grey4);
+}
