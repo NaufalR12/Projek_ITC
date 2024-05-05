@@ -1,0 +1,308 @@
+:root {
+  --cyan: #dff3fc;
+  --birdong: #364f6b;
+  --abu: #f5f5f5;
+  --pink: #fc5185;
+  --abu2: #d9d9d9;
+  --grey1: #333333;
+  --grey2: #4f4f4f;
+  --grey3: #828282;
+  --grey4: #bdbdbd;
+  --grey5: #e0e0e0;
+  --grey6: #7f8290;
+  --primary-color: #000000;
+  --text-color: #1d1d1d;
+  --bg-color: #dff3fc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Kanit", sans-serif;
+  background-color: #fff;
+  color: #000000;
+}
+
+.kotak {
+  padding: 5rem 7% 1.4rem;
+  margin: 0;
+  align-items: center;
+  background-image: url("../img/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.kotak .atas {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  background-color: var(--birdong);
+  padding: 1rem;
+}
+
+.kotak .atas img {
+  width: 15%;
+  margin-left: 0;
+  /* margin-right: auto; */
+  margin-right: 2rem;
+}
+
+.kotak .atas .profil {
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.kotak .atas .profil img{
+width: 25%;
+height: auto;
+}
+
+.kotak .atas .profil .nama-dokter{
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.kotak .atas .profil .profesi{
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--grey6);
+}
+
+
+.kotak .atas a {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.kotak .atas a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.kotak .bawah {
+  /* display: flex; */
+  background-color: rgba(54, 79, 107, 0.8);
+  padding: 1rem;
+  margin-top: 1rem;
+  color: #fff;
+}
+
+.kotak .bawah h2 {
+  padding: 1rem 2rem;
+  font-size: 2rem;
+}
+
+.bawah .row {
+  display: flex;
+  padding: 0 1rem;
+}
+.bawah .row .kiri {
+  flex: 0 0 35%;
+}
+
+.bawah .row .kiri .row-tanggal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--birdong);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bawah .kiri .kotak-hari {
+  background-color: var(--cyan);
+  color: black;
+  padding: 0 1rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  margin: 0 2rem 0 0;
+}
+
+
+.bawah .kiri .kotak-hari .phari {
+  color: var(--grey6);
+  font-size: 0.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.bawah .kiri .kotak-hari .htanggal {
+  color: black;
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+}
+
+/* Kalender */
+
+.kotak .row-calender{
+  margin: 1.5rem 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.kotak .container {
+  width: 100%;
+  /* min-height: 100vh; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.kotak .calendar {
+  width: 100%;
+  max-width: 600px;
+  padding: 30px 20px;
+  border-radius: 10px;
+  background-color: var(--bg-color);
+}
+.kotak .calendar .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #ccc;
+}
+.kotak .calendar .header .month {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+.kotak .calendar .header .btns {
+  display: flex;
+  gap: 10px;
+}
+.kotak .calendar .header .btns .btn {
+  width: 50px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  color: #fff;
+  background-color: var(--primary-color);
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.kotak .calendar .header .btns .btn:hover {
+  background-color: #db0933;
+  transform: scale(1.05);
+}
+.kotak .weekdays {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.kotak .weekdays .day {
+  width: calc(100% / 7 - 10px);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+.kotak .days {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.kotak .days .day {
+  width: calc(100% / 7 - 10px);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-color);
+  background-color: #fff;
+  transition: all 0.3s;
+}
+.kotak .days .day:not(.next):not(.prev):hover {
+  color: #fff;
+  background-color: var(--primary-color);
+  transform: scale(1.05);
+}
+.kotak .days .day.today {
+  color: #fff;
+  background-color: var(--primary-color);
+}
+.kotak .days .day.next,
+.kotak .days .day.prev {
+  color: #ccc;
+}
+
+/* Kanan */
+
+.bawah .row .kanan {
+  flex: 0 0 60%;
+  margin: 0 3rem;
+}
+
+
+.kanan .container-jadwal{
+  background-color:var(--cyan);
+  padding: 2rem;
+  border-radius: 1rem;
+  color: #000000;
+  margin-bottom: 1rem;
+}
+
+.container-jadwal .row1{
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  min-width: 100%;
+}
+
+.container-jadwal .row1 img{
+  margin: 0 1rem 0 0;
+}
+
+.container-jadwal .row1 .ket-waktu{
+  margin: 0 1rem 0 0;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.container-jadwal .row1 .rentang-waktu{
+  margin: 0 1rem 0 0;
+  font-weight: 200;
+}
+
+.container-jadwal .row2{
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+.container-jadwal .row2 .waktu{
+  border: 1.5px solid #000000;
+  padding: 0.25rem 0.5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}

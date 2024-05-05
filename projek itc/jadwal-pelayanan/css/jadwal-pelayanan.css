@@ -1,0 +1,157 @@
+:root {
+  --cyan: #dff3fc;
+  --birdong: #364f6b;
+  --abu: #f5f5f5;
+  --pink: #fc5185;
+  --abu2: #d9d9d9;
+  --grey1: #333333;
+  --grey2: #4f4f4f;
+  --grey3: #828282;
+  --grey4: #bdbdbd;
+  --grey5: #e0e0e0;
+  --grey6: #7f8290;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Kanit", sans-serif;
+  background-color: #fff;
+  color: #000000;
+  
+}
+
+.kotak {
+  padding: 5rem 7% 1.4rem;
+  margin: 0;
+  align-items: center;
+  background-image: url("../img/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.kotak .atas {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  background-color: var(--birdong);
+  padding: 1rem 1rem 0 1rem;
+}
+
+.kotak .atas img {
+  width: 15%;
+  margin-left: 0;
+  /* margin-right: auto; */
+  margin-right: 2rem;
+}
+
+.kotak .atas p {
+  margin-left: 0;
+  margin-right: auto;
+  color: var(--grey4);
+}
+
+.kotak .atas p span {
+  color: #fff;
+  font-weight: 600;
+}
+
+.kotak .atas a {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.kotak .atas a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.kotak .judul-tabel {
+  display: flex;
+  align-items: center;
+  background-color: var(--birdong);
+  justify-content: center;
+  padding: 0.5rem 1.5rem;
+  color: #fff;
+  font-weight: 400;
+}
+
+.kotak .judul-tabel .cell-1a{
+  width: 25%;
+  text-align: center;
+}
+
+.kotak .judul-tabel .cell-1b{
+  width: 25%;
+  text-align: center;
+}
+.kotak .judul-tabel .cell-1c{
+  width: 20%;
+  text-align: center;
+}
+.kotak .judul-tabel .cell-1d{
+  width: 15%;
+  text-align: center;
+}
+.kotak .judul-tabel .cell-1e{
+  width: 15%;
+  text-align: center;
+}
+
+.kotak .isi-tabel {
+  /* display: flex; */
+  background-color: rgba(54, 79, 107, 0.8);
+  padding: 1rem;
+}
+
+.kotak .isi-tabel .row {
+padding: 1rem;
+background-color: var(--cyan);
+border-radius: 1rem;
+}
+
+.kotak .isi-tabel .atas-baris{
+  display: flex;
+  flex-wrap: nowrap;
+  font-weight: bold;
+}
+
+.kotak .isi-tabel .cell-2a{
+  width: 25%;
+  text-align: center;
+}
+
+.kotak .isi-tabel .cell-2b{
+  width: 25%;
+  text-align: center;
+}
+.kotak .isi-tabel .cell-2c{
+  width: 20%;
+  text-align: center;
+}
+.kotak .isi-tabel .cell-2d{
+  width: 15%;
+  text-align: center;
+}
+.kotak .isi-tabel .cell-2e{
+  width: 15%;
+  text-align: center;
+}
+.kotak .isi-tabel .cell-2f{
+  text-align: center;
+  border-top: 1px solid black;
+  margin-top: 0.25rem;
+}

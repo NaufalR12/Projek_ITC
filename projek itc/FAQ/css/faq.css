@@ -1,0 +1,252 @@
+:root {
+  --cyan: #dff3fc;
+  --birdong: #364f6b;
+  --abu: #f5f5f5;
+  --pink: #fc5185;
+  --abu2: #d9d9d9;
+  --grey1: #333333;
+  --grey2: #4f4f4f;
+  --grey3: #828282;
+  --grey4: #bdbdbd;
+  --grey5: #e0e0e0;
+  --grey6: #7f8290;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Kanit", sans-serif;
+
+  color: #000000;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  padding: 1rem 7%;
+  background-color: rgb(54, 79, 107, 0.53);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  margin-top: 0.75rem;
+  margin-right: auto; /* Pushes navbar-logo to the left */
+}
+
+.navbar .navbar-logo img {
+  width: 75%;
+  height: auto; /* Untuk menjaga aspek rasio gambar */
+  padding: 0;
+}
+
+.navbar .navbar-nav {
+  margin-left: auto;
+}
+
+.navbar .navbar-nav a {
+  display: inline-block;
+  font-size: 1.4rem;
+  margin: 0 3rem;
+  color: #000000;
+  font-weight: bold;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--cyan);
+}
+
+.tombol-masuk {
+  background-color: rgba(54, 79, 107, 0.4);
+  padding: 0.25rem 1.5rem;
+  border-radius: 2rem;
+}
+
+.navbar .navbar-nav {
+  background-color: #fff;
+  padding: 0.25rem 1.5rem;
+  border-radius: 2rem;
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.25rem;
+  border-bottom: 0.1rem solid var(--cyan);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra {
+  margin-left: auto; /* Pushes navbar-extra to the right */
+}
+
+.navbar .navbar-extra a {
+  color: #fff;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--cyan);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* Faq */
+.faq {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/FAQ.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+}
+
+.faq .row {
+    margin-top: 8rem;
+  background-color: #fff;
+  padding: 1rem;
+  width: 80%;
+  border-radius: 1rem;
+  box-shadow:  0 2px 5px 0 rgba(0, 0, 9, 0.25);
+}
+
+.faq .row .container{
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+}
+
+.faq .content{
+    color: #000000;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    box-shadow:  0 2px 5px 0 rgba(0, 0, 9, 0.25);
+}
+
+.faq .header{
+    padding: 0.5rem 3rem 0.5rem 1rem;
+    min-height: 3.5rem;
+    line-height: 1.25rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.faq .header::after{
+    content: "\002b";
+    font-size: 2rem;
+    position: absolute;
+    right: 1rem;
+    
+}
+
+.faq .header.active::after{
+    content: "\2212";
+    
+}
+
+.faq .body{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.faq .body-content{
+    padding: 1rem;
+    line-height: 1.5rem;
+    border-top: 1px solid var(--cyan);
+}
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 20rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+    border-radius: 0;
+  }
+
+  .tombol-masuk {
+    background-color: #fff;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .navbar .navbar-nav a::after {
+    border-bottom: 0.1rem solid rgb(54, 79, 107, 0.53);
+  }
+
+  .navbar .navbar-nav a:hover {
+    color: rgb(54, 79, 107, 0.53);
+  }
+
+  .navbar .navbar-nav a {
+    margin-top: 1rem;
+    font-size: 2rem;
+    display: block;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
