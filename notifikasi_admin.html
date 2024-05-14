@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin (notification)</title>
+    <!-- Include Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- Include Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Include Kanit Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      a,
+      span,
+      button,
+      input,
+      select,
+      textarea {
+        font-family: "Kanit", sans-serif;
+      }
+
+      :root {
+    --cyan: #DFF3FC;
+    --birdong: rgb(54, 79, 107, 0.80);
+    --abu: #F5F5F5;
+    --pink: #FC5185;
+    --abu2: #D9D9D9;
+    --grey1: #333333;
+    --grey2: #4F4F4F;
+    --grey3: #828282;
+    --grey4: #BDBDBD;
+    --grey5: #E0E0E0;
+    --grey6: #7F8290;
+    --black: #000000;
+    --birumuda: #DFF3FC;
+    --red1: #FF0000;
+    --white: #FFFFFF;
+}
+
+      .profile-picture {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        object-fit: cover; 
+      }
+
+      .bg-white.p-4.rounded-lg.shadow-md.mb-4.flex.items-center.justify-between
+        div:nth-child(2) {
+        flex-grow: 1;
+      }
+
+      .bg-white.w-16.h-16.rounded-full.overflow-hidden.flex.items-center.justify-center.mr-4 {
+        flex-shrink: 0;
+      }
+      .flex-grow {
+        flex-grow: 1;
+      }
+      .info-below-border p {
+        font-size: 0.8rem; 
+      }
+
+      .smaller-font {
+        font-size: 0.8rem; 
+      }
+      .small-font {
+        font-size: 0.8rem; 
+      }
+
+      .sidebar-font {
+    font-size: 1.2rem;
+  }
+  
+  .sidebar-footer {
+      
+      color: #fff; 
+      padding: 10px 20px; 
+      margin-top: 29cap;
+      text-align: left;
+    }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <!-- Sidebar -->
+    <div class="flex h-screen bg-white">
+        <div class="w-64" style="background-color: var(--birdong);">
+        <div class="flex items-center justify-center mt-10">
+          <!-- Profile Image -->
+          <div class="w-25 h-25 overflow-hidden flex items-center ml-2 mr-2">
+            <img
+              src="./assets/image.png"
+              alt="Profile Picture"
+              class="profile-picture"
+            />
+          </div>
+        </div>
+        <nav class="mt-5 ml-2">
+
+          <a href="#" class="block py-2.5 px-4 text-gray-400 hover:text-white flex items-center sidebar-link sidebar-font font-semibold">
+            <div class="mr-3">
+              <img src="./assets/Home.png" alt="Doctor Icon" class="w-6 h-6">
+            </div>
+            <span>Beranda</span>
+          </a>
+          
+          
+          <a href="#" class="block py-2.5 px-4 text-gray-400 hover:text-white flex items-center sidebar-link sidebar-font font-semibold">
+            <div class="mr-3">
+              <img src="./assets/Medical Doctor.png" alt="Doctor Icon" class="w-6 h-6">
+            </div>
+            <span>Daftar Dokter</span>
+          </a>
+          
+          <a href="#" class="block py-2.5 px-4 text-gray-400 hover:text-white flex items-center sidebar-link sidebar-font font-semibold">
+            <div class="mr-3">
+              <img src="./assets/People.png" alt="Doctor Icon" class="w-6 h-6">
+            </div>
+            <span>Daftar Pasien</span>
+          </a>
+
+          <a href="#" class="block py-2.5 px-4 text-white hover:text-white flex items-center sidebar-link sidebar-font font-semibold">
+            <div class="mr-3">
+              <img src="./assets/Notification2.png" alt="Doctor Icon" class="w-6 h-6">
+            </div>
+            <span>Notifikasi</span>
+          </a>
+
+          <a href="#" class="block py-2.5 px-4 text-gray-400 hover:text-white flex items-center sidebar-link sidebar-font font-semibold">
+            <div class="mr-3">
+              <img src="./assets/Settings.png" alt="Doctor Icon" class="w-6 h-6">
+            </div>
+            <span>Setting</span>
+          </a>
+          
+          <footer class="sidebar-footer">
+            <div class="container mx-auto">
+              <a href="#" class="block text-gray-400 hover:text-white flex items-center sidebar-link sidebar-font font-semibold">
+                <div class="mr-3">
+                  <img src="./assets/Help.png" alt="Help Icon" class="w-6 h-6">
+                </div>
+                <span>Bantuan</span>
+              </a>
+            </div>
+          </footer>
+          
+        </nav>
+        <!-- Navbar -->
+      </div>
+      <!-- Sidebar End -->
+
+      <!-- Content -->
+      <div class="flex-grow p-10 relative">
+    
+        <header
+          class="flex justify-end items-center p-4 absolute top-0 right-0 mr-8"
+        >
+          <div class="flex items-center">
+            
+            <div class="w-10 h-10 overflow-hidden flex items-center justify-center rounded-full bg-gray-300">
+             
+              <img src="assets/Notification.png" alt="Leave Icon" class="max-w-full max-h-full">
+            </div>
+            <div class="w-10 h-10 overflow-hidden flex items-center justify-center rounded-full bg-gray-300 ml-2">
+             
+              <img src="assets/Logout.png" alt="Bell Icon" class="max-w-full max-h-full">
+            </div>
+          </div>
+        </header>
+
+        <div class="absolute inset-0 flex justify-center items-center overflow-auto">
+          <div class="w-screen h-2/3 text-white p-8 rounded-lg shadow-lg mt-4 mb-4 ml-12 mr-12" style="background-color: var(--birdong);">
+            <div class="bg-gray-200 rounded-lg shadow-md p-4 mb-4">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center">
+                    <img src="assets/db.png" alt="Database Icon" class="w-8 h-8 mr-2">
+                    <div>
+                      <h2 class="text-lg font-semibold text-black">Data pasien berhasil ditambahkan</h2>
+                      <p class="text-gray-600">Baca Selengkapnya</p>
+                    </div>
+                  </div>
+                  <a href="#" class="text-black"><i class="fas fa-times"></i></a>
+                </div>
+              </div>
+
+              
+              <div class="bg-gray-200 rounded-lg shadow-md p-4 mb-4">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center">
+                    <img src="assets/db.png" alt="Database Icon" class="w-8 h-8 mr-2">
+                    <div>
+                      <h2 class="text-lg font-semibold text-black">Data pasien berhasil ditambahkan</h2>
+                      <p class="text-gray-600">Baca Selengkapnya</p>
+                    </div>
+                  </div>
+                  <a href="#" class="text-black"><i class="fas fa-times"></i></a>
+                </div>
+              </div>
+
+              
+              <div class="bg-gray-200 rounded-lg shadow-md p-4 mb-4">
+                <div class="flex items-center justify-between">
+        
+                  <div class="flex items-center">
+                    <img src="assets/db.png" alt="Database Icon" class="w-8 h-8 mr-2">
+
+                    <div>
+                      <h2 class="text-lg font-semibold text-black">Data pasien berhasil ditambahkan</h2>
+                      <p class="text-gray-600">Baca Selengkapnya</p>
+                    </div>
+                  </div>
+          
+                  <a href="#" class="text-black"><i class="fas fa-times"></i></a>
+                </div>
+              </div>
+
+             
+        
+          </div>
+        </div>
+        
+
+      </div>
+    </div>
+  </body>
+</html>

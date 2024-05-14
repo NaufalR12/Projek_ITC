@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halaman dengan Sidebar</title>
+    <!-- Include Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- Include Font Awesome ini buat ikon -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Include Kanit Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <style>
+      
+      body {
+        font-family: 'Kanit', sans-serif;
+      }
+      
+      .profile-picture {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        object-fit: cover; 
+      }
+
+      :root {
+    --cyan: #DFF3FC;
+    --birdong: rgb(54, 79, 107, 0.80);
+    --abu: #F5F5F5;
+    --pink: #FC5185;
+    --abu2: #D9D9D9;
+    --grey1: #333333;
+    --grey2: #4F4F4F;
+    --grey3: #828282;
+    --grey4: #BDBDBD;
+    --grey5: #E0E0E0;
+    --grey6: #7F8290;
+    --black: #000000;
+    --birumuda: #DFF3FC;
+    --red1: #FF0000;
+    --white: #FFFFFF;
+}
+      
+      .info-box {
+        padding: 1.5rem; 
+        margin: 1rem; 
+      }
+
+     
+      .info-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+     
+      .info-content .info-item {
+        margin: 0.5rem; 
+        text-align: left; 
+      }
+
+      
+      .umur-info {
+        margin-right: 0.5rem; 
+        margin-bottom: 0.5rem;
+      }
+
+     
+      .statistic-image {
+        max-width: 100%; 
+        height: auto;
+        display: block; 
+        margin-top: 1rem; 
+        max-height: 300px;
+        margin-left: auto;
+        margin-right: auto; 
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-100">
+    <!-- Sidebar -->
+    <div class="flex h-screen bg-gray-200">
+      <div class="w-64" style="background-color: var(--birdong);">
+        <div class="flex items-center justify-center mt-10">
+          <!-- Profile Image -->
+          <div class="w-25 h-25 overflow-hidden flex items-center ml-2 mr-2">
+            <img
+            src="./assets/image.png"
+              alt="Profile Picture"
+              class="profile-picture"
+            />
+          </div>
+        </div>
+        <nav class="mt-5 ml-2">
+          <a href="#" class="block py-2.5 px-4 text-gray-400 hover:bg-gray-700">
+            <i class="fas fa-home mr-2"></i> Beranda
+          </a>
+          <a href="#" class="block py-2.5 px-4 text-gray-400 hover:bg-gray-700">
+            <i class="far fa-calendar mr-3"></i> Kalender
+          </a>
+          <a
+            href="#"
+            class="block py-2.5 px-4 text-gray-400 hover:bg-gray-700 hover:text-white"
+          >
+            <i class="far fa-file-alt mr-4"></i> Jadwal
+          </a>
+          <a
+            href="#"
+            class="block py-2.5 px-4 text-white font-bold hover:bg-gray-700 hover:text-white"
+          >
+            <i class="fas fa-user-friends mr-2"></i> Pasien
+          </a>
+          <a
+            href="#"
+            class="block py-2.5 px-4 text-gray-400 hover:bg-gray-700 hover:text-white"
+          >
+            <i class="far fa-comments mr-2"></i> Pesan
+          </a>
+          <a
+            href="#"
+            class="block py-2.5 px-4 text-gray-400 hover:bg-gray-700 hover:text-white"
+          >
+            <i class="fas fa-bell mr-2"></i> Notifikasi
+          </a>
+          <a
+            href="#"
+            class="block py-2.5 px-4 text-gray-400 hover:bg-gray-700 hover:text-white"
+          >
+            <i class="fas fa-cog mr-2"></i> Setting
+          </a>
+        </nav>
+        <!-- Navbar -->
+      </div>
+      <!-- Sidebar End -->
+
+      <!-- Content -->
+      <div class="flex-grow p-10 mt-10">
+        <header
+          class="flex justify-end items-center p-4 absolute top-0 right-0"
+        >
+        
+          <button
+            class="text-white hover:text-gray-200 mr-4 rounded-full bg-gray-400 p-2 w-10 h-10"
+          >
+            <i class="fas fa-search"></i>
+          </button>
+          <button
+            class="text-white hover:text-gray-200 mr-4 rounded-full bg-gray-400 p-2 w-10 h-10"
+          >
+            <i class="fas fa-bell"></i>
+          </button>
+          <button
+            class="text-white hover:text-gray-200 mr-4 rounded-full bg-gray-400 p-2 w-10 h-10"
+          >
+            <i class="fas fa-user"></i>
+          </button>
+        </header>
+        <div class="flex flex-col md:flex-row md:space-x-4">
+          <div class="md:w-1/3 flex justify-center items-center">
+            <div
+              class="bg-white p-8 rounded-lg shadow-md mb-4 flex items-start flex-col justify-center items-center info-box"
+            >
+              
+              <div
+                class="bg-white w-16 h-16 rounded-full overflow-hidden flex items-center justify-center mb-4"
+              >
+                <img
+                  src="https://via.placeholder.com/150"
+                  alt="Profile Picture"
+                  class="w-10 h-10 object-cover rounded-full profile-picture"
+                />
+              </div>
+              <div class="text-center">
+                <h3 class="text-lg font-bold">John Agus!</h3>
+                <hr class="border-b border-gray-300 my-2 w-full" />
+               
+                <div class="h-full overflow-auto">
+                
+                </div>
+                
+                <div class="info-content">
+                  <div class="text-gray-500 flex items-center info-item">
+                    <i class="fas fa-male mr-1"></i> Gender<br />Male
+                  </div>
+                  <div
+                    class="text-gray-500 flex items-center info-item flex-grow mr-2"
+                  >
+                    <i class="far fa-calendar-alt mr-1"></i> Umur<br />24
+                  </div>
+                  <div
+                    class="text-gray-500 flex items-center info-item flex-grow"
+                  >
+                    <i class="fas fa-arrows-alt-v mr-1"></i> Tinggi<br />175 cm
+                  </div>
+                  <div
+                    class="text-gray-500 flex items-center info-item flex-grow"
+                  >
+                    <i class="fas fa-tint mr-1"></i> Gol Darah<br />O
+                  </div>
+                </div>
+                <br />
+                <div class="text-black font-bold flex items-center">
+                  <span>Riwayat Periksa</span>
+                  <div class="ml-2 relative">
+                    <div
+                      class="absolute inset-0 flex items-center justify-center"
+                    >
+                      <i class="fas fa-chevron-right text-black ml-7"></i>
+                    </div>
+                    <div
+                      class="absolute inset-0 flex items-center justify-center"
+                    >
+                      <i
+                        class="fas fa-circle text-transparent border border-black p-2 rounded-full h-6 w-6 ml-7"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="additional-content text-left flex items-center ml-auto"
+                >
+                  <div
+                    class="bg-white w-16 h-16 rounded-full overflow-hidden flex items-center justify-center mb-4 mt-5 mr-4"
+                  >
+                    <img
+                      src="https://via.placeholder.com/150"
+                      alt="Profile Picture"
+                      class="w-10 h-10 object-cover rounded-full profile-picture"
+                    />
+                  </div>
+                  <div>
+                    <p class="text-black font-bold mt-3">Gejala Tipes</p>
+                    <p class="text-gray-500 font-semibold">Dr. Sri Handayani</p>
+                    <p class="text-gray-500 font-semibold">
+                      10.00 - 10.30 | 20 Januari 2024
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="additional-content text-left flex items-center ml-auto"
+                >
+                  <div
+                    class="bg-white w-16 h-16 rounded-full overflow-hidden flex items-center justify-center mb-4 mt-5 mr-4"
+                  >
+                    <img
+                      src="https://via.placeholder.com/150"
+                      alt="Profile Picture"
+                      class="w-10 h-10 object-cover rounded-full profile-picture"
+                    />
+                  </div>
+                  <div>
+                    <p class="text-black font-bold mt-3">Gejala Tipes</p>
+                    <p class="text-gray-500 font-semibold">Dr. Sri Handayani</p>
+                    <p class="text-gray-500 font-semibold">
+                      10.00 - 10.30 | 20 Januari 2024
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="md:w-2/3">
+            <div class="md:w-2/3">
+              <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <!-- Sleep -->
+                <div class="bg-gray-300 p-4 rounded-lg shadow-md flex flex-col items-start">
+                  <div class="rounded-full bg-gray-200 p-3 flex items-center justify-center mr-4"> 
+                    <i class="fas fa-bed text-xl"></i>
+                  </div>
+                  <div class="flex flex-col justify-center">
+                    <h2 class="text-lg font-bold mt-2">Tidur</h2>
+                    <p class="font-bold">7h 33m</p>
+                  </div>
+                </div>
+
+                <!-- Weight -->
+                <div class="bg-gray-100 p-4 rounded-lg shadow-md flex flex-col items-start">
+                  <div class="rounded-full bg-gray-300 p-3 flex items-center justify-center mr-4">
+                    <i class="fas fa-weight text-xl"></i>
+                  </div>
+                  <div class="flex flex-col justify-center"> 
+                  <h2 class="text-lg font-bold mt-2">Berat</h2>
+                  <p class="font-bold">87 kg</p>
+                  </div>
+                </div>
+
+                <!-- Steps -->
+                <div class="bg-gray-300 p-4 rounded-lg shadow-md flex flex-col items-start">
+                  <div class="rounded-full bg-gray-200 p-3 flex items-center justify-center mr-4">
+                    <i class="fas fa-walking text-xl"></i>
+                  </div>
+                  <div class="flex flex-col justify-center">
+                  <h2 class="text-lg font-bold mt-2">Langkah</h2>
+                  <p class="font-bold">3,315</p>
+                  </div>
+                </div>
+
+                <!-- Calories -->
+                <div class="bg-gray-100 p-4 rounded-lg shadow-md flex flex-col items-start">
+                  <div class="rounded-full bg-gray-300 p-3 flex items-center justify-center mr-4">
+                    <i class="fas fa-fire text-xl"></i>
+                  </div>
+                  <div class="flex flex-col justify-center">
+                  <h2 class="text-lg font-bold mt-2">Kalori</h2>
+                  <p class="font-bold">2,587 kcal</p>
+                  </div>
+                </div>
+
+              </div>
+            
+             
+              <div class="bg-white p-4 rounded-lg shadow-md mt-4 text-center">
+                <p>ini cara buat grafiknya gimana yak</p>
+
+                <img src="stat.png" alt="" class="statistic-image">
+              </div>
+            </div>
+            
+
+        </div>
+      </div>
+      <!-- Content End -->
+    </div>
+  </body>
+</html>

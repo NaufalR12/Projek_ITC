@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halaman dengan Sidebar</title>
+    <!-- Include Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- Include Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Include Kanit Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Mengatur font menjadi Kanit */
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      a,
+      span,
+      button,
+      input,
+      select,
+      textarea {
+        font-family: "Kanit", sans-serif;
+      }
+
+      :root {
+        --cyan: #dff3fc;
+        --birdong: rgb(54, 79, 107, 0.80);
+        --abu: #f5f5f5;
+        --pink: #fc5185;
+        --abu2: #d9d9d9;
+        --grey1: #333333;
+        --grey2: #4f4f4f;
+        --grey3: #828282;
+        --grey4: #bdbdbd;
+        --grey5: #e0e0e0;
+        --grey6: #7f8290;
+        --black: #000000;
+        --birumuda: #dff3fc;
+        --red1: #ff0000;
+        --white: #ffffff;
+      }
+
+      /* Menambahkan CSS untuk memastikan gambar tidak terpotong menjadi persegi */
+      .profile-picture {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        object-fit: cover; /* Menjaga gambar tetap berbentuk persegi panjang */
+      }
+
+      /* Tambahkan CSS untuk mengatur teks ke kiri */
+      .bg-white.p-4.rounded-lg.shadow-md.mb-4.flex.items-center.justify-between
+        div:nth-child(2) {
+        flex-grow: 1;
+      }
+
+      /* New CSS to align profile image with text */
+      .bg-white.w-16.h-16.rounded-full.overflow-hidden.flex.items-center.justify-center.mr-4 {
+        flex-shrink: 0;
+      }
+      .flex-grow {
+        flex-grow: 1;
+      }
+      /* Tambahkan CSS untuk mengurangi ukuran font informasi di bawah border */
+      .info-below-border p {
+        font-size: 0.8rem; /* Ubah ukuran font sesuai kebutuhan */
+      }
+
+      .smaller-font {
+        font-size: 0.8rem; /* Sesuaikan ukuran font sesuai kebutuhan */
+      }
+      /* 
+    .box-hover:hover {
+      background-color: #546076; 
+    }
+
+    .box-hover:hover h2 {
+      color: white;
+    } */
+
+      .checkbox-container {
+        background-color: white; /* Mengubah warna latar belakang menjadi putih */
+        padding: 10px;
+        margin-bottom: 5px; /* Untuk memberikan jarak antara kotak-kotak */
+        max-width: 300px; /* Anda dapat mengatur lebar maksimum sesuai kebutuhan */
+      }
+      .smaller-font {
+        font-size: 0.8rem; 
+      }
+  
+      .small-font {
+        font-size: 0.8rem; 
+      }
+      .sidebar-font {
+    font-size: 1.2rem; 
+  }
+  
+  .sidebar-footer {
+      
+      color: #fff; 
+      padding: 10px 20px;
+      margin-top: 29cap;
+      text-align: left;
+    }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <!-- Sidebar -->
+    <div class="flex h-screen bg-white">
+      <div class="w-64" style="background-color: var(--birdong);">
+        <div class="flex items-center justify-center mt-10">
+          <!-- Profile Image -->
+          <div class="w-25 h-25 overflow-hidden flex items-center ml-2 mr-2">
+            <img
+              src="./assets/image.png"
+              alt="Profile Picture"
+              class="profile-picture"
+            />
+          </div>
+        </div>
+        <nav class="mt-5 ml-2">
+
+          <a href="#" class="block py-2.5 px-4 text-gray-400 hover:text-white flex items-center sidebar-link sidebar-font font-semibold">
+            <div class="mr-3">
+              <img src="./assets/Home.png" alt="Doctor Icon" class="w-6 h-6">
+            </div>
+            <span>Beranda</span>
+          </a>
+          
+          
+          <a href="#" class="block py-2.5 px-4 text-gray-400 hover:text-white flex items-center sidebar-link sidebar-font font-semibold">
+            <div class="mr-3">
+              <img src="./assets/Medical Doctor.png" alt="Doctor Icon" class="w-6 h-6">
+            </div>
+            <span>Daftar Dokter</span>
+          </a>
+          
+          <a href="#" class="block py-2.5 px-4 text-gray-400 hover:text-white flex items-center sidebar-link sidebar-font font-semibold">
+            <div class="mr-3">
+              <img src="./assets/People.png" alt="Doctor Icon" class="w-6 h-6">
+            </div>
+            <span>Daftar Pasien</span>
+          </a>
+
+          <a href="#" class="block py-2.5 px-4 text-white hover:text-white flex items-center sidebar-link sidebar-font font-semibold">
+            <div class="mr-3">
+              <img src="./assets/Notification2.png" alt="Doctor Icon" class="w-6 h-6">
+            </div>
+            <span>Notifikasi</span>
+          </a>
+
+          <a href="#" class="block py-2.5 px-4 text-gray-400 hover:text-white flex items-center sidebar-link sidebar-font font-semibold">
+            <div class="mr-3">
+              <img src="./assets/Settings.png" alt="Doctor Icon" class="w-6 h-6">
+            </div>
+            <span>Setting</span>
+          </a>
+          
+          <footer class="sidebar-footer">
+            <div class="container mx-auto">
+              <a href="#" class="block text-gray-400 hover:text-white flex items-center sidebar-link sidebar-font font-semibold">
+                <div class="mr-3">
+                  <img src="./assets/Help.png" alt="Help Icon" class="w-6 h-6">
+                </div>
+                <span>Bantuan</span>
+              </a>
+            </div>
+          </footer>
+          
+        </nav>
+        <!-- Navbar -->
+      </div>
+      <!-- Sidebar End -->
+
+      <!-- Content -->
+      <div class="flex-grow p-10 relative">
+        <!-- Existing content -->
+        <header
+          class="flex justify-end items-center p-4 absolute top-0 right-0 mr-8"
+        >
+        <div class="w-10 h-10 overflow-hidden flex items-center justify-center rounded-full bg-gray-300">
+             
+          <img src="assets/Notification.png" alt="Leave Icon" class="max-w-full max-h-full">
+        </div>
+        <div class="w-10 h-10 overflow-hidden flex items-center justify-center rounded-full bg-gray-300 ml-2">
+         
+          <img src="assets/Logout.png" alt="Bell Icon" class="max-w-full max-h-full">
+        </div>
+          
+          
+        </header>
+
+        <!-- New box besar ditengah -->
+        <div class="absolute inset-0 flex justify-center items-center overflow-auto">
+          <div class="w-screen h-5/6 text-white p-8 rounded-lg shadow-lg mt-20 mb-4 ml-12 mr-12" style="background-color: var(--birdong);">
+            <div>
+                <h2 class="text-lg font-bold text-black mt-2 ml-1">Account</h2>
+            </div>
+            
+            <div class="bg-gray-200 shadow-md p-4 mb-2 mt-3">
+                <div class="flex items-center justify-between">
+                  <!-- Notification Icon -->
+                  <div class="flex items-center ml-2">
+                    <div>
+                      <h2 class="text-sm text-black text-sm">Username</h2>
+                      <p class="text-gray-600 text-sm">@pg</p>
+                    </div>
+                  </div>
+                  <button class="text-white rounded-lg py-1 px-3" style="background-color: var(--birdong);">Change</button>
+                </div>
+              </div>
+
+              
+              <div class="bg-gray-200 shadow-md p-4 mb-2">
+                <div class="flex items-center justify-between">
+                  <!-- Notification Icon -->
+                  <div class="flex items-center ml-2">
+                    <div>
+                        <h2 class="text-sm text-black text-sm">Email Address</h2>
+                        <p class="text-gray-600 text-sm">hello@designdrops.io</p>
+                    </div>
+                  </div>
+                  <button class="text-white rounded-lg py-1 px-3" style="background-color: var(--birdong);">Change</button>
+                </div>
+              </div>
+
+              
+              <div class="bg-gray-200 shadow-md p-4 mb-2">
+                <div class="flex items-center justify-between">
+                  <!-- Notification Icon -->
+                  <div class="flex items-center ml-2">
+                    <div>
+                        <h2 class="text-sm text-black text-sm">Password</h2>
+                        <p class="text-gray-600 text-sm">You signed up via Google, so you don't have a password.</p>
+                    </div>
+                  </div>
+                  <button class="text-white rounded-lg py-1 px-3" style="background-color: var(--birdong);">Change</button>
+                </div>
+              </div>
+
+              <div class="bg-gray-200 shadow-md p-4 mb-4">
+                <div class="flex items-center justify-between">
+                  <!-- Notification Icon -->
+                  <div class="flex items-center ml-2">
+                    <div>
+                        <h2 class="text-sm text-black text-sm">Deletion</h2>
+                        <p class="text-gray-600 text-sm">Permanently delete your account, posts, and comments.</p>
+                    </div>
+                  </div>
+                  <button class="text-white rounded-lg py-1 px-3" style="background-color: var(--birdong);">Change</button>
+                </div>
+              </div>
+
+              <div>
+                <h2 class="text-lg font-bold text-black mt-2 mb-2 ml-1 text-sm">Website Notification</h2>
+                <h2 class="text-lg font-bold text-white mt-2 mb-2 ml-1 text-sm">What would you like to see when you visit the Indie Hackers website?</h2>
+            </div>
+            
+
+            
+            <div class="mt-4">
+                <div class="checkbox-container">
+                  <div class="flex items-center ml-2 text-black">
+                    <input type="checkbox" id="notifyPatient" name="notifyPatient" class="mr-2">
+                    <label for="notifyEmail">Notifications for new patient</label>
+                  </div>
+                </div>
+                <div class="checkbox-container mt-4">
+                  <div class="flex items-center ml-2 text-black">
+                    <input type="checkbox" id="notifySMS" name="notifySMS" class="mr-2">
+                    <label for="notifySMS">Notifications for new messages</label>
+                  </div>
+                </div>
+                <!-- Add more checkboxes if needed -->
+              </div>
+        
+          </div>
+        </div>
+        <!-- End box besar ditengah -->
+
+      </div>
+    </div>
+  </body>
+</html>
