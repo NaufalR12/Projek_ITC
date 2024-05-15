@@ -1,0 +1,94 @@
+body {
+    background-image: url('../img/background.png');
+    background-size: cover;
+    font-family: Arial, sans-serif;
+  }
+
+.container {
+    margin-top: 20px;
+}
+
+.navbar {
+    background-color: #364F6B;
+}
+
+.navbar img {
+    max-height: 50px;
+}
+
+.navbar-left {
+    margin-left: 15px;
+}
+
+.navbar-center {
+    color: white;
+    display: flex;
+    align-items: center;
+}
+  
+.navbar-center img {
+    margin-right: 10px; 
+}
+
+.navbar-center div {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-center div span:last-child {
+    margin-top: -30px; 
+}
+
+.navbar-right {
+    margin-right: 15px;
+}
+
+.navbar-right a{
+    text-decoration: none;    
+    color: white;
+}
+
+.content {
+    background-color: rgba(54, 79, 107, 0.8); 
+    height: auto;
+}
+
+.content strong p {
+    padding: 10px;
+    font-size: 30px;
+    color: white;
+    margin-left: 10px;
+}
+
+.content .blockquote {
+    background-color: #364F6B;
+    border-radius: 10px;
+    color: white;
+}
+
+.content .blockquote p{
+    font-size: 20px;
+    padding: 20px;
+}
+
+.content .blockquote1 {
+    height: 46vh;
+    background-color: #DFF3FC;
+    border-radius: 10px;
+    color: white;
+}
+
+.content .blockquote3 {
+    height: 29vh;
+    background-color: #DFF3FC;
+    border-radius: 10px;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.content .blockquote3 p{
+    text-align: left;
+    margin-left: 30px;
+
+}
