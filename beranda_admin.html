@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda Admin</title>
+    <!-- Link ke CSS -->
+    <link rel="stylesheet" href="beranda_admin.css">
+    <!-- Import Boxicon CSS usage as a font -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+</head>
+
+<body>
+    <div class="background-container">
+        <div class="flexbar">
+            <div class="sidebar">
+                <div class="grupLogo">
+                    <div class="kotakLogo"></div>
+                    <img src="./assets/logoklinik.png" alt="Logo Klinik Pratama">
+                </div>
+                <ul class="menu">
+                    <li><a href="#"><i class="bx bx-home"></i> Beranda</a></li>
+                    <li><a href="#"><i class="bx bx-calendar"></i> Kalender</a></li>
+                    <li><a href="#"><i class="bx bx-file"></i> Jadwal</a></li>
+                    <li><a href="#"><i class="bx bx-user"></i> Pasien</a></li>
+                    <li><a href="#"><i class="bx bx-message-rounded-detail"></i> Pesan</a></li>
+                    <li><a href="#"><i class="bx bx-bell"></i> Notifikasi</a></li>
+                    <li><a href="#"><i class="bx bx-cog"></i> Pengaturan</a></li>
+                </ul>
+                <ul class="bantuan">
+                    <li><a href="#"><i class="bx bx-help-circle"></i> Bantuan</a></li>
+                </ul>
+            </div>
+
+            <div class="content">
+                <div class="Menyapa">
+                    <div class="kehadiran">
+                        <span>Kehadiran</span>
+                        <input type="checkbox" name="CekKehadiran" id="kehadiran">
+                    </div>
+                    <h3>Halo, Admin!</h3>
+                    <div class="kalimatSapaan">Semoga harimu menyenangkan!</div>
+                    <div class="KartunAdmin"><img src="./assets/Dashboard-Admin.png" alt="Dashboard Admin"></div>
+                </div>
+
+                <div class="kotakTambahData">
+                    <div class="flexZigzagLine">
+                        <img src="./assets/zigzag-line.png" class="zigzag-dokter">
+                        <img src="./assets/zigzag-line.png" class="zigzag-pasien">
+                    </div>
+                    <div class="ket-TambahData">Tambah Data</div>
+                    <div class="grupGridTambahData">
+                        <div class="grupKartunDokter">
+                            <img src="./assets/img-dokter4.png" alt="Kartun Dokter" width="170px">
+                        </div>
+                        <a href="#">
+                            <button class="btnTambahDokter" type="button">
+                                <div class="textDokter">Dokter</div>
+                            </button>
+                        </a>
+                        <a href="#">
+                            <button class="btnTambahPasien" type="button">
+                                <div class="textPasien">Pasien</div>
+                            </button>
+                        </a>
+                        <div class="grupKartunPasien">
+                            <img src="./assets/img-kartun-pasien.png" alt="Kartun Pasien" width="170px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ellips">
+            <a href="#"><button type="button" class="notiv"><i class="bx bx-bell"></i></button></a>
+            <a href="#"><button type="button" class="back"><i class="bx bx-exit"></i></button></a>
+        </div>
+    </div>
+</body>
+
+</html>
