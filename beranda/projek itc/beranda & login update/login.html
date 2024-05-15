@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>login</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css"
+    />
+    <!-- Font Awesome CSS -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    />
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+  <body>
+    <main>
+      <article>
+        <div class="container">
+          <button type="button" class="btn btn-info btn-round" id="loginButton">
+            Login
+          </button>
+        </div>
+
+        <div
+          class="modal fade"
+          id="loginModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <div class="form-title text-center">
+                  <img src="img/pratama.png" class="logo-img" />
+                </div>
+
+                <div class="text-center masuk">
+                  Masukkan Nomor Anggota Klinik
+                </div>
+
+                <div class="text-center titlee">
+                  Masukkan nomor anggota klinik untuk masuk ke Pratama
+                  <span
+                    >jika belum mempunyai nomor keanggotaan silahkan datang ke
+                    Klinik Pratama.</span
+                  >
+                </div>
+
+                <div class="d-flex flex-column text-center">
+                  <form>
+                    <div class="form-group">
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email1"
+                        placeholder="Masukkan nomor anggota klinik"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="password1"
+                        placeholder="Masukkan password"
+                      />
+                    </div>
+                    <button
+                      type="button"
+                      class="btn btn-info btn-block btn-round"
+                      id="loginSubmit"
+                    >
+                      Login
+                    </button>
+                  </form>
+
+                  <div class="text-center titlee2">
+                    Dengan masuk, saya menyetujui Ketentuan penggunaan Pratama
+                    dan Kebijakan Privasi Pratama
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <!-- Custom Script -->
+    <script src="js/login.js"></script>
+  </body>
+</html>
