@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beranda Dokter</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css" />
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" />
     <!-- Link ke CSS -->
     <link rel="stylesheet" href="beranda_dokter.css">
     <!-- Import Boxicon CSS usage as a font -->
@@ -22,7 +26,7 @@
                 <li><a href="#"><i class="bx bx-home"></i> Beranda</a></li>
                 <li><a href="#"><i class="bx bx-calendar"></i> Kalender</a></li>
                 <li><a href="#"><i class="bx bx-file"></i> Jadwal</a></li>
-                <li><a href="#"><i class="bx bx-user"></i> Pasien</a></li>
+                <li><a href="#" id="cariPasien"><i class="bx bx-user"></i> Pasien</a></li>
                 <li><a href="#"><i class="bx bx-message-rounded-detail"></i> Pesan</a></li>
                 <li><a href="#"><i class="bx bx-bell"></i> Notifikasi</a></li>
                 <li><a href="#"><i class="bx bx-cog"></i> Pengaturan</a></li>
@@ -41,12 +45,13 @@
                 <div class="kalimatSapaan">Semoga harimu menyenangkan!</div>
                 <div class="KartunDokter"><img src="./assets/img-dokter.png" alt="Dokter"></div>
             </div>
-        
+
             <div class="grupKerja">
                 <div class="daring">
                     <div class="Kerja">Kerja Daring</div>
                     <div class="flexKerja">
-                        <div class="grafikDaring"><img src="./assets/img-curved.png" alt="Grafik Daring" width="160px" height="120px"></div>
+                        <div class="grafikDaring"><img src="./assets/img-curved.png" alt="Grafik Daring" width="160px"
+                                height="120px"></div>
                         <div class="pasien">
                             <div class="jumlahPasien"><span class="jmlPasien">11</span> Pasien</div>
                             <div class="hari">Hari ini</div>
@@ -56,7 +61,8 @@
                 <div class="luring">
                     <div class="Kerja">Kerja Luring</div>
                     <div class="flexKerja">
-                        <div class="grafikDaring"><img src="./assets/img-curved.png" alt="Grafik Daring" width="160px" height="120px"></div>
+                        <div class="grafikDaring"><img src="./assets/img-curved.png" alt="Grafik Daring" width="160px"
+                                height="120px"></div>
                         <div class="pasien">
                             <div class="jumlahPasien"><span class="jmlPasien">12</span> Pasien</div>
                             <div class="hari">Hari ini</div>
@@ -64,7 +70,7 @@
                     </div>
                 </div>
             </div>
-        
+
             <div class="bioDokter">
                 <div class="fotoDokter"><img src="./assets/img-foto.png" alt="Foto Dokter" width="116px"></div>
                 <div class="namaDanSpesialis">
@@ -82,14 +88,56 @@
             </div>
         </div>
     </div>
-    
+
 
     <div class="ellips">
         <a href="#"><button type="button" class="notiv"><i class="bx bx-bell"></i></button></a>
         <a href="#"><button type="button" class="back"><i class="bx bx-exit"></i></button></a>
     </div>
 
+    <!-- Pop Up Cari Pasien -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="form-title text-center">
+                    <img src="./assets/Logo.png" class="logo-img">
+                </div>
+                <div class="modal-body">
+                    <div class="text-center" id="masuk">
+                        Masukkan Nomor Pasien <br>
+                        Klinik Pratama
+                    </div>
 
+                    <div class="text-center" id="titlee">
+                        Masukkan Nomor Anggota Klinik Pasien.
+                    </div>
+
+                    <div class="d-flex flex-column text-center">
+                        <form action="#" method="POST" class="kotakForm">
+                            <div class="form-group">
+                                <input type="email" name="email" id="email1" class="form-control"
+                                    placeholder="Masukkan nomor anggota klinik">
+                            </div>
+                            <button type="button" class="btn btn-info btn-block btn-round" id="cari">
+                                Cari
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End pop up -->
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <!-- Custom Script -->
+    <script src="beranda_dokter.js"></script>
 </body>
 
 </html>
