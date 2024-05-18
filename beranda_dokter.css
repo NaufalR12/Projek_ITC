@@ -80,6 +80,7 @@ html, body {
     word-wrap: break-word;
     font-size: 1.25rem;
     color: var(--grey6);
+    text-decoration: none;
 }
 
 .sidebar a i {
@@ -188,8 +189,8 @@ html, body {
 .grupKerja .daring, .grupKerja .luring {
     background-color: var(--abu);
     padding: 20px 20px 20px 20px;
-    width: 430px;
-    height: 170px;
+    width: 470px;
+    height: 215px;
     border-radius: 37px;
     margin-left: 20px;
 }
@@ -248,4 +249,66 @@ html, body {
     font-size: 20px;
     font-weight: 600;
     color: var(--grey4);
+}
+
+.kotakForm {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.btn-info {
+    background-color: #364F6B;
+    border-color: #17a2b8;
+    margin-top: 30px;
+    border-radius: 5px;
+    margin-bottom: 75px;
+}
+
+.btn-info:hover {
+    background-color: #0f6b79;
+    border-color: #117a8b;
+}
+
+.modal-content {
+    border-radius: 0;
+    background-image: url('./assets/background.png');
+    background-size: cover;
+    position: relative;
+    padding-top: 100px;
+  }
+
+.modal-body {
+    padding: 0;
+}
+
+.logo-img {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: auto;
+}
+
+.form-group {
+    margin: 10px 0px;
+}
+
+.form-control {
+    border-radius: 5px;
+}
+
+.form-control::placeholder {
+    text-align: center;
+}
+
+#masuk {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: -15px;
+}
+
+#titlee {
+    font-size: 15px;
+    margin-bottom: 10px;
 }
