@@ -5,6 +5,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Beranda Pasien</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css" />
+        <!-- Font Awesome CSS -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" />
         <!-- Link CSS -->
         <link rel="stylesheet" href="beranda_pasien.css">
         <!-- Import Boxicon CSS usage as a font -->
@@ -22,7 +27,7 @@
                                 <li><a href="#"><i class="bx bx-home"></i> Beranda</a></li>
                                 <li><a href="#"><i class="bx bx-calendar"></i> Kalender</a></li>
                                 <li><a href="#"><i class="bx bx-file"></i> Jadwal</a></li>
-                                <li><a href="#"><i class="bx bx-user"></i> Pasien</a></li>
+                                <li><a href="#" id="loginPasien"><i class="bx bx-user"></i> Pasien</a></li>
                                 <li><a href="#"><i class="bx bx-message-rounded-detail"></i> Pesan</a></li>
                                 <li><a href="#"><i class="bx bx-bell"></i> Notifikasi</a></li>
                                 <li><a href="#"><i class="bx bx-cog"></i> Pengaturan</a></li>
@@ -132,33 +137,45 @@
                                                                 <div class="fotoDokter"><img src="./assets/img-foto.png"
                                                                                 alt="Foto Dokter" width="50px"></div>
                                                                 <div class="grupNamadanSpesialis">
-                                                                        <div class="gelar">Dr. <span class="namaDokter">Sri Handayani</span></div>
+                                                                        <div class="gelar">Dr. <span
+                                                                                        class="namaDokter">Sri
+                                                                                        Handayani</span></div>
                                                                         <div class="spesialis">Umum</div>
                                                                 </div>
                                                         </div>
                                                 </div>
 
                                                 <div class="grupPilihWaktu">
-                                                        <input type="radio" name="custom-waktu" id="pilihPukul1"> 
-                                                        <label for="pilihPukul1" class="custom-waktu"><span class="waktu">08.00</span> WIB</label>
-                                                        <input type="radio" name="custom-waktu" id="pilihPukul2"> 
-                                                        <label for="pilihPukul2" class="custom-waktu"><span class="waktu">08.00</span> WIB</label>
-                                                        <input type="radio" name="custom-waktu" id="pilihPukul3"> 
-                                                        <label for="pilihPukul3" class="custom-waktu"><span class="waktu">08.00</span> WIB</label>
-                                                        <input type="radio" name="custom-waktu" id="pilihPukul4"> 
-                                                        <label for="pilihPukul4" class="custom-waktu"><span class="waktu">08.00</span> WIB</label>
-                                                        <input type="radio" name="custom-waktu" id="pilihPukul5"> 
-                                                        <label for="pilihPukul5" class="custom-waktu"><span class="waktu">08.00</span> WIB</label>
-                                                        <input type="radio" name="custom-waktu" id="pilihPukul6"> 
-                                                        <label for="pilihPukul6" class="custom-waktu"><span class="waktu">08.00</span> WIB</label>
-                                                        <input type="radio" name="custom-waktu" id="pilihPukul7"> 
-                                                        <label for="pilihPukul7" class="custom-waktu"><span class="waktu">08.00</span> WIB</label>
-                                                        <input type="radio" name="custom-waktu" id="pilihPukul8"> 
-                                                        <label for="pilihPukul8" class="custom-waktu"><span class="waktu">08.00</span> WIB</label>
-                                                        <input type="radio" name="custom-waktu" id="pilihPukul9"> 
-                                                        <label for="pilihPukul9" class="custom-waktu"><span class="waktu">08.00</span> WIB</label>
-                                                        <input type="radio" name="custom-waktu" id="pilihPukul10"> 
-                                                        <label for="pilihPukul10" class="custom-waktu"><span class="waktu">08.00</span> WIB</label>
+                                                        <input type="radio" name="custom-waktu" id="pilihPukul1">
+                                                        <label for="pilihPukul1" class="custom-waktu"><span
+                                                                        class="waktu">08.00</span> WIB</label>
+                                                        <input type="radio" name="custom-waktu" id="pilihPukul2">
+                                                        <label for="pilihPukul2" class="custom-waktu"><span
+                                                                        class="waktu">08.00</span> WIB</label>
+                                                        <input type="radio" name="custom-waktu" id="pilihPukul3">
+                                                        <label for="pilihPukul3" class="custom-waktu"><span
+                                                                        class="waktu">08.00</span> WIB</label>
+                                                        <input type="radio" name="custom-waktu" id="pilihPukul4">
+                                                        <label for="pilihPukul4" class="custom-waktu"><span
+                                                                        class="waktu">08.00</span> WIB</label>
+                                                        <input type="radio" name="custom-waktu" id="pilihPukul5">
+                                                        <label for="pilihPukul5" class="custom-waktu"><span
+                                                                        class="waktu">08.00</span> WIB</label>
+                                                        <input type="radio" name="custom-waktu" id="pilihPukul6">
+                                                        <label for="pilihPukul6" class="custom-waktu"><span
+                                                                        class="waktu">08.00</span> WIB</label>
+                                                        <input type="radio" name="custom-waktu" id="pilihPukul7">
+                                                        <label for="pilihPukul7" class="custom-waktu"><span
+                                                                        class="waktu">08.00</span> WIB</label>
+                                                        <input type="radio" name="custom-waktu" id="pilihPukul8">
+                                                        <label for="pilihPukul8" class="custom-waktu"><span
+                                                                        class="waktu">08.00</span> WIB</label>
+                                                        <input type="radio" name="custom-waktu" id="pilihPukul9">
+                                                        <label for="pilihPukul9" class="custom-waktu"><span
+                                                                        class="waktu">08.00</span> WIB</label>
+                                                        <input type="radio" name="custom-waktu" id="pilihPukul10">
+                                                        <label for="pilihPukul10" class="custom-waktu"><span
+                                                                        class="waktu">08.00</span> WIB</label>
                                                 </div>
                                         </div>
 
@@ -173,26 +190,36 @@
                                                 </div>
 
                                                 <div class="grupPilihWaktu">
-                                                        <input type="radio" name="custom-waktu" id="pilihPukul11"> 
-                                                        <label for="pilihPukul11" class="custom-waktu"><span class="waktu">08.00</span> WIB</label>
-                                                        <input type="radio" name="custom-waktu" id="pilihPukul12"> 
-                                                        <label for="pilihPukul12" class="custom-waktu"><span class="waktu">08.00</span> WIB</label>
-                                                        <input type="radio" name="custom-waktu" id="pilihPukul13"> 
-                                                        <label for="pilihPukul13" class="custom-waktu"><span class="waktu">08.00</span> WIB</label>
-                                                        <input type="radio" name="custom-waktu" id="pilihPukul14"> 
-                                                        <label for="pilihPukul14" class="custom-waktu"><span class="waktu">08.00</span> WIB</label>
-                                                        <input type="radio" name="custom-waktu" id="pilihPukul15"> 
-                                                        <label for="pilihPukul15" class="custom-waktu"><span class="waktu">08.00</span> WIB</label>
-                                                        <input type="radio" name="custom-waktu" id="pilihPukul16"> 
-                                                        <label for="pilihPukul16" class="custom-waktu"><span class="waktu">08.00</span> WIB</label>
-                                                        <input type="radio" name="custom-waktu" id="pilihPukul17"> 
-                                                        <label for="pilihPukul17" class="custom-waktu"><span class="waktu">08.00</span> WIB</label>
-                                                        <input type="radio" name="custom-waktu" id="pilihPukul18"> 
-                                                        <label for="pilihPukul18" class="custom-waktu"><span class="waktu">08.00</span> WIB</label>
-                                                        <input type="radio" name="custom-waktu" id="pilihPukul19"> 
-                                                        <label for="pilihPukul19" class="custom-waktu"><span class="waktu">08.00</span> WIB</label>
-                                                        <input type="radio" name="custom-waktu" id="pilihPukul20"> 
-                                                        <label for="pilihPukul20" class="custom-waktu"><span class="waktu">08.00</span> WIB</label>
+                                                        <input type="radio" name="custom-waktu" id="pilihPukul11">
+                                                        <label for="pilihPukul11" class="custom-waktu"><span
+                                                                        class="waktu">08.00</span> WIB</label>
+                                                        <input type="radio" name="custom-waktu" id="pilihPukul12">
+                                                        <label for="pilihPukul12" class="custom-waktu"><span
+                                                                        class="waktu">08.00</span> WIB</label>
+                                                        <input type="radio" name="custom-waktu" id="pilihPukul13">
+                                                        <label for="pilihPukul13" class="custom-waktu"><span
+                                                                        class="waktu">08.00</span> WIB</label>
+                                                        <input type="radio" name="custom-waktu" id="pilihPukul14">
+                                                        <label for="pilihPukul14" class="custom-waktu"><span
+                                                                        class="waktu">08.00</span> WIB</label>
+                                                        <input type="radio" name="custom-waktu" id="pilihPukul15">
+                                                        <label for="pilihPukul15" class="custom-waktu"><span
+                                                                        class="waktu">08.00</span> WIB</label>
+                                                        <input type="radio" name="custom-waktu" id="pilihPukul16">
+                                                        <label for="pilihPukul16" class="custom-waktu"><span
+                                                                        class="waktu">08.00</span> WIB</label>
+                                                        <input type="radio" name="custom-waktu" id="pilihPukul17">
+                                                        <label for="pilihPukul17" class="custom-waktu"><span
+                                                                        class="waktu">08.00</span> WIB</label>
+                                                        <input type="radio" name="custom-waktu" id="pilihPukul18">
+                                                        <label for="pilihPukul18" class="custom-waktu"><span
+                                                                        class="waktu">08.00</span> WIB</label>
+                                                        <input type="radio" name="custom-waktu" id="pilihPukul19">
+                                                        <label for="pilihPukul19" class="custom-waktu"><span
+                                                                        class="waktu">08.00</span> WIB</label>
+                                                        <input type="radio" name="custom-waktu" id="pilihPukul20">
+                                                        <label for="pilihPukul20" class="custom-waktu"><span
+                                                                        class="waktu">08.00</span> WIB</label>
                                                 </div>
                                         </div>
 
@@ -206,7 +233,9 @@
                                                 </div>
 
                                                 <div class="grupPilihWaktu">
-                                                        <input type="radio" name="custom-waktu" id="pilihPukul0"> <label for="pilihWaktu21" class="custom-waktu"><span class="waktu">-</span></label>
+                                                        <input type="radio" name="custom-waktu" id="pilihPukul0"> <label
+                                                                for="pilihWaktu21" class="custom-waktu"><span
+                                                                        class="waktu">-</span></label>
                                                 </div>
                                         </div>
                                 </div>
@@ -229,33 +258,45 @@
                                                                 <div class="fotoDokter"><img src="./assets/img-foto.png"
                                                                                 alt="Foto Dokter" width="50px"></div>
                                                                 <div class="grupNamadanSpesialis">
-                                                                        <div class="gelar">Dr. <span class="namaDokter">Sri Handayani</span></div>
+                                                                        <div class="gelar">Dr. <span
+                                                                                        class="namaDokter">Sri
+                                                                                        Handayani</span></div>
                                                                         <div class="spesialis">Umum</div>
                                                                 </div>
                                                         </div>
                                                 </div>
 
                                                 <div class="grupPilihWaktu">
-                                                        <input type="radio" name="custom-waktu" id="pilihPukul21"> 
-                                                        <label for="pilihPukul21" class="custom-waktu"><span class="waktu">08.00</span> WIB</label>
-                                                        <input type="radio" name="custom-waktu" id="pilihPukul22"> 
-                                                        <label for="pilihPukul22" class="custom-waktu"><span class="waktu">08.00</span> WIB</label>
-                                                        <input type="radio" name="custom-waktu" id="pilihPukul23"> 
-                                                        <label for="pilihPukul23" class="custom-waktu"><span class="waktu">08.00</span> WIB</label>
-                                                        <input type="radio" name="custom-waktu" id="pilihPukul24"> 
-                                                        <label for="pilihPukul24" class="custom-waktu"><span class="waktu">08.00</span> WIB</label>
-                                                        <input type="radio" name="custom-waktu" id="pilihPukul25"> 
-                                                        <label for="pilihPukul25" class="custom-waktu"><span class="waktu">08.00</span> WIB</label>
-                                                        <input type="radio" name="custom-waktu" id="pilihPukul26"> 
-                                                        <label for="pilihPukul26" class="custom-waktu"><span class="waktu">08.00</span> WIB</label>
-                                                        <input type="radio" name="custom-waktu" id="pilihPukul27"> 
-                                                        <label for="pilihPukul27" class="custom-waktu"><span class="waktu">08.00</span> WIB</label>
-                                                        <input type="radio" name="custom-waktu" id="pilihPukul28"> 
-                                                        <label for="pilihPukul28" class="custom-waktu"><span class="waktu">08.00</span> WIB</label>
-                                                        <input type="radio" name="custom-waktu" id="pilihPukul29"> 
-                                                        <label for="pilihPukul29" class="custom-waktu"><span class="waktu">08.00</span> WIB</label>
-                                                        <input type="radio" name="custom-waktu" id="pilihPukul30"> 
-                                                        <label for="pilihPukul30" class="custom-waktu"><span class="waktu">08.00</span> WIB</label>
+                                                        <input type="radio" name="custom-waktu" id="pilihPukul21">
+                                                        <label for="pilihPukul21" class="custom-waktu"><span
+                                                                        class="waktu">08.00</span> WIB</label>
+                                                        <input type="radio" name="custom-waktu" id="pilihPukul22">
+                                                        <label for="pilihPukul22" class="custom-waktu"><span
+                                                                        class="waktu">08.00</span> WIB</label>
+                                                        <input type="radio" name="custom-waktu" id="pilihPukul23">
+                                                        <label for="pilihPukul23" class="custom-waktu"><span
+                                                                        class="waktu">08.00</span> WIB</label>
+                                                        <input type="radio" name="custom-waktu" id="pilihPukul24">
+                                                        <label for="pilihPukul24" class="custom-waktu"><span
+                                                                        class="waktu">08.00</span> WIB</label>
+                                                        <input type="radio" name="custom-waktu" id="pilihPukul25">
+                                                        <label for="pilihPukul25" class="custom-waktu"><span
+                                                                        class="waktu">08.00</span> WIB</label>
+                                                        <input type="radio" name="custom-waktu" id="pilihPukul26">
+                                                        <label for="pilihPukul26" class="custom-waktu"><span
+                                                                        class="waktu">08.00</span> WIB</label>
+                                                        <input type="radio" name="custom-waktu" id="pilihPukul27">
+                                                        <label for="pilihPukul27" class="custom-waktu"><span
+                                                                        class="waktu">08.00</span> WIB</label>
+                                                        <input type="radio" name="custom-waktu" id="pilihPukul28">
+                                                        <label for="pilihPukul28" class="custom-waktu"><span
+                                                                        class="waktu">08.00</span> WIB</label>
+                                                        <input type="radio" name="custom-waktu" id="pilihPukul29">
+                                                        <label for="pilihPukul29" class="custom-waktu"><span
+                                                                        class="waktu">08.00</span> WIB</label>
+                                                        <input type="radio" name="custom-waktu" id="pilihPukul30">
+                                                        <label for="pilihPukul30" class="custom-waktu"><span
+                                                                        class="waktu">08.00</span> WIB</label>
                                                 </div>
                                         </div>
 
@@ -270,26 +311,36 @@
                                                 </div>
 
                                                 <div class="grupPilihWaktu">
-                                                        <input type="radio" name="custom-waktu" id="pilihPukul11"> 
-                                                        <label for="pilihPukul11" class="custom-waktu"><span class="waktu">08.00</span> WIB</label>
-                                                        <input type="radio" name="custom-waktu" id="pilihPukul12"> 
-                                                        <label for="pilihPukul12" class="custom-waktu"><span class="waktu">08.00</span> WIB</label>
-                                                        <input type="radio" name="custom-waktu" id="pilihPukul13"> 
-                                                        <label for="pilihPukul13" class="custom-waktu"><span class="waktu">08.00</span> WIB</label>
-                                                        <input type="radio" name="custom-waktu" id="pilihPukul14"> 
-                                                        <label for="pilihPukul14" class="custom-waktu"><span class="waktu">08.00</span> WIB</label>
-                                                        <input type="radio" name="custom-waktu" id="pilihPukul15"> 
-                                                        <label for="pilihPukul15" class="custom-waktu"><span class="waktu">08.00</span> WIB</label>
-                                                        <input type="radio" name="custom-waktu" id="pilihPukul16"> 
-                                                        <label for="pilihPukul16" class="custom-waktu"><span class="waktu">08.00</span> WIB</label>
-                                                        <input type="radio" name="custom-waktu" id="pilihPukul17"> 
-                                                        <label for="pilihPukul17" class="custom-waktu"><span class="waktu">08.00</span> WIB</label>
-                                                        <input type="radio" name="custom-waktu" id="pilihPukul18"> 
-                                                        <label for="pilihPukul18" class="custom-waktu"><span class="waktu">08.00</span> WIB</label>
-                                                        <input type="radio" name="custom-waktu" id="pilihPukul19"> 
-                                                        <label for="pilihPukul19" class="custom-waktu"><span class="waktu">08.00</span> WIB</label>
-                                                        <input type="radio" name="custom-waktu" id="pilihPukul20"> 
-                                                        <label for="pilihPukul20" class="custom-waktu"><span class="waktu">08.00</span> WIB</label>
+                                                        <input type="radio" name="custom-waktu" id="pilihPukul11">
+                                                        <label for="pilihPukul11" class="custom-waktu"><span
+                                                                        class="waktu">08.00</span> WIB</label>
+                                                        <input type="radio" name="custom-waktu" id="pilihPukul12">
+                                                        <label for="pilihPukul12" class="custom-waktu"><span
+                                                                        class="waktu">08.00</span> WIB</label>
+                                                        <input type="radio" name="custom-waktu" id="pilihPukul13">
+                                                        <label for="pilihPukul13" class="custom-waktu"><span
+                                                                        class="waktu">08.00</span> WIB</label>
+                                                        <input type="radio" name="custom-waktu" id="pilihPukul14">
+                                                        <label for="pilihPukul14" class="custom-waktu"><span
+                                                                        class="waktu">08.00</span> WIB</label>
+                                                        <input type="radio" name="custom-waktu" id="pilihPukul15">
+                                                        <label for="pilihPukul15" class="custom-waktu"><span
+                                                                        class="waktu">08.00</span> WIB</label>
+                                                        <input type="radio" name="custom-waktu" id="pilihPukul16">
+                                                        <label for="pilihPukul16" class="custom-waktu"><span
+                                                                        class="waktu">08.00</span> WIB</label>
+                                                        <input type="radio" name="custom-waktu" id="pilihPukul17">
+                                                        <label for="pilihPukul17" class="custom-waktu"><span
+                                                                        class="waktu">08.00</span> WIB</label>
+                                                        <input type="radio" name="custom-waktu" id="pilihPukul18">
+                                                        <label for="pilihPukul18" class="custom-waktu"><span
+                                                                        class="waktu">08.00</span> WIB</label>
+                                                        <input type="radio" name="custom-waktu" id="pilihPukul19">
+                                                        <label for="pilihPukul19" class="custom-waktu"><span
+                                                                        class="waktu">08.00</span> WIB</label>
+                                                        <input type="radio" name="custom-waktu" id="pilihPukul20">
+                                                        <label for="pilihPukul20" class="custom-waktu"><span
+                                                                        class="waktu">08.00</span> WIB</label>
                                                 </div>
                                         </div>
 
@@ -303,7 +354,9 @@
                                                 </div>
 
                                                 <div class="grupPilihWaktu">
-                                                        <input type="radio" name="custom-waktu" id="pilihPukul0"> <label for="pilihWaktu21" class="custom-waktu"><span class="waktu">-</span></label>
+                                                        <input type="radio" name="custom-waktu" id="pilihPukul0"> <label
+                                                                for="pilihWaktu21" class="custom-waktu"><span
+                                                                        class="waktu">-</span></label>
                                                 </div>
                                         </div>
                                 </div>
@@ -317,6 +370,53 @@
                 <a href="#"><button type="button" class="notiv"><i class="bx bx-bell"></i></button></a>
                 <a href="#"><button type="button" class="back"><i class="bx bx-exit"></i></button></a>
         </div>
+
+
+        <!-- Pop Up Login -->
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                                <div class="form-title text-center">
+                                        <img src="./assets/Logo.png" class="logo-img">
+                                </div>
+                                <div class="modal-body">
+                                        <div class="text-center" id="masuk">
+                                                Masukkan Nomor Pasien <br>
+                                                Klinik Pratama
+                                        </div>
+
+                                        <div class="text-center" id="titlee">
+                                                Masukkan Nomor Anggota Klinik Pasien.
+                                        </div>
+
+                                        <div class="d-flex flex-column text-center">
+                                                <form action="#" method="POST" class="kotakForm">
+                                                        <div class="form-group">
+                                                                <input type="email" name="email" id="email1"
+                                                                        class="form-control"
+                                                                        placeholder="Masukkan nomor anggota klinik">
+                                                        </div>
+                                                        <button type="button" class="btn btn-info btn-block btn-round"
+                                                                id="cari">
+                                                                Cari
+                                                        </button>
+                                                </form>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+        <!-- End pop up -->
+
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+        <!-- Custom Script -->
+        <script src="beranda_pasien.js"></script>
 </body>
 
 </html>
