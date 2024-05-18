@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html,
+body {
+    font-family: "Kanit", sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+:root {
+    --cyan: #DFF3FC;
+    --birdong: rgb(54, 79, 107, 0.80);
+    --abu: #F5F5F5;
+    --pink: #FC5185;
+    --abu2: #D9D9D9;
+    --grey1: #333333;
+    --grey2: #4F4F4F;
+    --grey3: #828282;
+    --grey4: #BDBDBD;
+    --grey5: #E0E0E0;
+    --grey6: #7F8290;
+    --black: #000000;
+    --birumuda: #DFF3FC;
+    --red1: #FF0000;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.flexbar {
+    height: 270vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    width: 266px;
+    height: 100%;
+    background: var(--birdong);
+}
+
+.sidebar .grupLogo {
+    width: 249px;
+    height: 64.05px;
+    left: 8px;
+    top: 37px;
+}
+
+.sidebar .grupLogo .kotakLogo {
+    width: 249px;
+    height: 64.05px;
+    left: 8px;
+    top: 37px;
+    position: absolute;
+    background: var(--cyan);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+}
+
+.sidebar .grupLogo img {
+    width: 249px;
+    height: 49.62px;
+    position: absolute;
+    left: 8px;
+    top: 44.22px;
+}
+
+.sidebar a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 50px;
+    word-wrap: break-word;
+    font-size: 1.25rem;
+    color: var(--grey6);
+    text-decoration: none;
+}
+
+.sidebar a i {
+    color: var(--abu);
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    color: var(--abu);
+}
+
+.sidebar .menu {
+    position: absolute;
+    left: 43px;
+    top: 150px;
+}
+
+.sidebar .bantuan {
+    position: absolute;
+    left: 43px;
+    bottom: 20px;
+}
+
+.ellips {
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    z-index: 999;
+}
+
+.ellips button {
+    background-color: var(--abu2);
+    border-radius: 50%;
+    border-style: none;
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+}
+
+.kalimatAwal {
+    background-color: var(--birdong);
+    border-radius: 37px;
+    position: absolute;
+    top: 40px;
+    left: 315px;
+    width: 350px;
+    height: 75px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    vertical-align: middle;
+    padding-left: 30px;
+    color: var(--abu);
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.kalimatAwal .namaPasien {
+    color: var(--black);
+    padding-left: 5px;
+}
+
+.kalimatAwal img {
+    position: absolute;
+    right: 25px;
+}
+
+.grupAppoinment {
+    position: absolute;
+    top: 150px;
+    left: 315px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px;
+}
+
+.KotakAppoinment {
+    background-color: var(--abu);
+    padding: 20px;
+    width: 450px;
+    height: 270px;
+    border-radius: 37px;
+}
+
+.flexFoto {
+    position: relative;
+    top: 5px;
+    left: 20px;
+    display: flex;
+    justify-content: left;
+    text-align: left;
+}
+
+.flexFoto .grupNamadanSpesialis {
+    margin-left: 20px;
+    font-weight: 600;
+    color: var(--black);
+    font-size: 20px;
+}
+
+.grupNamadanSpesialis .spesialis {
+    color: var(--grey4);
+}
+
+.grupStatus {
+    position: relative;
+    top: 10px;
+    left: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.grupStatus .status {
+    color: var(--grey4);
+}
+
+.jadwalAppoinment {
+    position: relative;
+    top: 60px;
+    left: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--grey4);
+    display: flex;
+    justify-content: left;
+}
+
+.jadwalAppoinment .grupWaktu {
+    margin-left: 50px;
+}
+
+.tanggalAppoinment,
+.waktuAppoinment {
+    color: var(--black);
+}
+
+.flexAppoinment {
+    position: relative;
+    top: 70px;
+    left: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.flexAppoinment .grupTelp {
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+    margin-right: 10px;
+}
+
+.flexAppoinment .grupTelp .videoCall,
+.flexAppoinment .grupTelp .call {
+    width: 48px;
+    height: 48px;
+    background-color: var(--abu2);
+    border-radius: 50%;
+    color: var(--black);
+}
+
+.flexAppoinment button {
+    width: 195px;
+    height: 42px;
+    border-radius: 15px;
+    color: var(--white);
+    font-weight: 600;
+    font-size: 16px;
+    background-color: var(--birdong);
+    border-style: none;
+    cursor: pointer;
+    transition: filter 0.3s ease;
+}
+
+.flexAppoinment button:hover {
+    box-shadow: 0 0 10px var(--birdong);
+}
+
+.gridJadwalDokter1 {
+    position: absolute;
+    top: 500px;
+    left: 315px;
+}
+
+.gridJadwalDokter2 {
+    position: absolute;
+    top: 1150px;
+    left: 315px;
+}
+
+.gridJadwalDokter1,
+.gridJadwalDokter2 {
+    display: grid;
+    grid-template-columns: 0.5fr 0.4fr;
+    grid-gap: 40px;
+}
+
+.gridJadwalDokter1 .kartun img,
+.gridJadwalDokter2 .kartun img {
+    background-color: var(--birdong);
+    padding: 20px;
+    width: 300px;
+    height: 520px;
+    border-radius: 37px;
+    object-fit: contain;
+}
+
+.gridJadwalDokter1 .kumpulanJadwalDokter,
+.gridJadwalDokter2 .kumpulanJadwalDokter {
+    background-color: var(--abu);
+    border-radius: 37px;
+    width: 590px;
+    height: 520px;
+    padding: 20px;
+}
+
+.kotakJadwalPagi .flexAtas {
+    position: relative;
+    top: 5px;
+    right: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logoPagi,
+.logoSiang,
+.logoMalam {
+    width: 39px;
+    height: 49px;
+    background-color: var(--abu2);
+    border-radius: 50%;
+    place-content: center;
+    padding-left: 10px;
+    margin-right: 20px;
+}
+
+.pagi,
+.siang,
+.malam {
+    position: relative;
+    top: 5px;
+    left: 5px;
+    display: flex;
+    justify-content: left;
+}
+
+.grupRentangWaktu {
+    font-size: 16px;
+}
+
+.grupRentangWaktu .ket1 {
+    font-weight: 600;
+}
+
+.biodokter {
+    position: relative;
+    top: 5px;
+    right: 5px;
+    display: flex;
+    justify-content: right;
+}
+
+.biodokter .fotoDokter {
+    width: 50px;
+    margin-right: 20px;
+}
+
+.biodokter .grupNamadanSpesialis {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.grupPilihWaktu {
+    position: relative;
+    top: 15px;
+    left: 5px;
+    right: 5px;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(5, 0.5fr);
+    gap: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.grupPilihWaktu input[type="radio"] {
+    display: none;
+}
+
+.grupPilihWaktu .custom-waktu {
+    display: inline-block;
+    padding: 5px 0px 5px 15px;
+    border: 1px solid var(--black);
+    border-radius: 4px;
+    background-color: var(--abu2);
+    color: var(--black);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+input[type="radio"]:checked+.custom-waktu {
+    background-color: var(--black);
+    border: 1px solid var(--abu2);
+    color: var(--abu2);
+}
+
+.custom-waktu:hover {
+    background-color: var(--black);
+    border: 1px solid var(--abu2);
+    color: var(--abu2);
+}
