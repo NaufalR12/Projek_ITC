@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-html, body {
+html,
+body {
     font-family: "Kanit", sans-serif;
     width: 100%;
     height: 100%;
@@ -47,29 +48,29 @@ html, body {
 }
 
 .sidebar .grupLogo {
-    width: 249px; 
-    height: 64.05px; 
-    left: 8px; 
+    width: 249px;
+    height: 64.05px;
+    left: 8px;
     top: 37px;
 }
 
 .sidebar .grupLogo .kotakLogo {
-    width: 249px; 
-    height: 64.05px; 
-    left: 8px; 
-    top: 37px; 
-    position: absolute; 
-    background: var(--cyan); 
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
-    border-radius: 8px; 
+    width: 249px;
+    height: 64.05px;
+    left: 8px;
+    top: 37px;
+    position: absolute;
+    background: var(--cyan);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
 }
 
 .sidebar .grupLogo img {
-    width: 249px; 
-    height: 49.62px; 
+    width: 249px;
+    height: 49.62px;
     position: absolute;
-    left: 8px; 
-    top: 44.22px; 
+    left: 8px;
+    top: 44.22px;
 }
 
 .sidebar a {
@@ -80,13 +81,15 @@ html, body {
     word-wrap: break-word;
     font-size: 1.25rem;
     color: var(--grey6);
+    text-decoration: none;
 }
 
 .sidebar a i {
     color: var(--abu);
 }
 
-.sidebar a:hover, .sidebar a.active {
+.sidebar a:hover,
+.sidebar a.active {
     color: var(--abu);
 }
 
@@ -124,7 +127,7 @@ html, body {
     position: absolute;
     top: 40px;
     left: 315px;
-    width: 350px;
+    width: 380px;
     height: 75px;
     display: flex;
     justify-content: left;
@@ -152,14 +155,14 @@ html, body {
     left: 315px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 25px; 
+    grid-gap: 25px;
 }
 
 .KotakAppoinment {
     background-color: var(--abu);
     padding: 20px;
     width: 450px;
-    height: 270px;
+    height: 310px;
     border-radius: 37px;
 }
 
@@ -211,7 +214,8 @@ html, body {
     margin-left: 50px;
 }
 
-.tanggalAppoinment, .waktuAppoinment {
+.tanggalAppoinment,
+.waktuAppoinment {
     color: var(--black);
 }
 
@@ -230,7 +234,8 @@ html, body {
     margin-right: 10px;
 }
 
-.flexAppoinment .grupTelp .videoCall, .flexAppoinment .grupTelp .call {
+.flexAppoinment .grupTelp .videoCall,
+.flexAppoinment .grupTelp .call {
     width: 48px;
     height: 48px;
     background-color: var(--abu2);
@@ -267,13 +272,15 @@ html, body {
     left: 315px;
 }
 
-.gridJadwalDokter1, .gridJadwalDokter2 {
+.gridJadwalDokter1,
+.gridJadwalDokter2 {
     display: grid;
     grid-template-columns: 0.5fr 0.4fr;
     grid-gap: 40px;
 }
 
-.gridJadwalDokter1 .kartun img, .gridJadwalDokter2 .kartun img {
+.gridJadwalDokter1 .kartun img,
+.gridJadwalDokter2 .kartun img {
     background-color: var(--birdong);
     padding: 20px;
     width: 300px;
@@ -282,7 +289,8 @@ html, body {
     object-fit: contain;
 }
 
-.gridJadwalDokter1 .kumpulanJadwalDokter,  .gridJadwalDokter2 .kumpulanJadwalDokter{
+.gridJadwalDokter1 .kumpulanJadwalDokter,
+.gridJadwalDokter2 .kumpulanJadwalDokter {
     background-color: var(--abu);
     border-radius: 37px;
     width: 590px;
@@ -298,7 +306,9 @@ html, body {
     justify-content: space-between;
 }
 
-.logoPagi, .logoSiang, .logoMalam {
+.logoPagi,
+.logoSiang,
+.logoMalam {
     width: 39px;
     height: 49px;
     background-color: var(--abu2);
@@ -308,7 +318,9 @@ html, body {
     margin-right: 20px;
 }
 
-.pagi, .siang, .malam {
+.pagi,
+.siang,
+.malam {
     position: relative;
     top: 5px;
     left: 5px;
@@ -370,7 +382,7 @@ html, body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-input[type="radio"]:checked + .custom-waktu {
+input[type="radio"]:checked+.custom-waktu {
     background-color: var(--black);
     border: 1px solid var(--abu2);
     color: var(--abu2);
@@ -380,4 +392,66 @@ input[type="radio"]:checked + .custom-waktu {
     background-color: var(--black);
     border: 1px solid var(--abu2);
     color: var(--abu2);
+}
+
+.kotakForm {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.btn-info {
+    background-color: #364F6B;
+    border-color: #17a2b8;
+    margin-top: 30px;
+    border-radius: 5px;
+    margin-bottom: 75px;
+}
+
+.btn-info:hover {
+    background-color: #0f6b79;
+    border-color: #117a8b;
+}
+
+.modal-content {
+    border-radius: 0;
+    background-image: url('./assets/background.png');
+    background-size: cover;
+    position: relative;
+    padding-top: 100px;
+  }
+
+.modal-body {
+    padding: 0;
+}
+
+.logo-img {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: auto;
+}
+
+.form-group {
+    margin: 10px 0px;
+}
+
+.form-control {
+    border-radius: 5px;
+}
+
+.form-control::placeholder {
+    text-align: center;
+}
+
+#masuk {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: -15px;
+}
+
+#titlee {
+    font-size: 15px;
+    margin-bottom: 10px;
 }
