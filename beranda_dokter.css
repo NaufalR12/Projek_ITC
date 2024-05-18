@@ -296,6 +296,7 @@ html, body {
 
 .form-control {
     border-radius: 5px;
+    text-align: center;
 }
 
 .form-control::placeholder {
