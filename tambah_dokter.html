@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Tambah Dokter</title>
+    <!-- Link ke CSS -->
+    <link rel="stylesheet" href="tambah_dokter.css">
+    <!-- Import Boxicon CSS usage as a font -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+</head>
+
+<body>
+    <div class="background-container">
+        <!-- Navbar awal -->
+        <nav class="navbar">
+            <a href="#" class="navbar-logo"><img src="./assets/Logo.png" alt="Logo Klinik" /></a>
+        </nav>
+        <!-- Navbar akhir -->
+
+        <!-- Form Tambah Dokter -->
+        <form action="#" method="POST" target="_blank">
+            <div class="kotakFormTambahDokter">
+                <h1 class="title">Tambah Data Dokter</h1>
+                <div class="form-group form-group-grid">
+                    <div class="label-input">
+                        <label for="nama">Nama</label>
+                        <input type="text" name="nama" id="nama" placeholder="John Doe" required>
+                    </div>
+                    <div class="label-input">
+                        <label for="SIP">SIP</label>
+                        <input type="text" name="SIP" id="SIP" placeholder="12xxx" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label-input">
+                        <label for="alamat">Alamat</label>
+                        <textarea name="alamat" id="alamat" placeholder="Address" required></textarea>
+                    </div>
+                </div>
+                <div class="form-group form-group-grid">
+                    <div class="label-input">
+                        <label for="nomorTelp">Nomor telp</label>
+                        <input type="tel" name="nomorTelp" id="nomorTelp" placeholder="+6200000000" required>
+                    </div>
+                    <div class="label-input">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="JohnDoe@gmail.com" required>
+                    </div>
+                </div>
+                <div class="form-group form-group-grid">
+                    <div class="label-input">
+                        <label for="ttl">Tanggal Lahir</label>
+                        <input type="date" name="ttl" id="ttl">
+                    </div>
+                    <div class="label-input">
+                        <label for="pass">Password</label>
+                        <input type="password" name="pass" id="pass" placeholder="Input Password">
+                    </div>
+                </div>
+                <div class="form-group form-group-grid select">
+                    <div class="label-input">
+                        <label for="pilihGender">Jenis Kelamin</label>
+                        <select name="pilihGender" id="pilihGender">
+                            <option disabled selected>-Pilih Gender-</option>
+                            <option value="Laki-Laki">Laki-Laki</option>
+                            <option value="Perempuan">Perempuan</option>
+                        </select>
+                    </div>
+                    <div class="label-input">
+                        <label for="pilihPoli">Poli</label>
+                        <select name="pilihPoli" id="pilihPoli">
+                            <option disabled selected>-Pilih Poli-</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="button-container">
+                <button type="button" onclick="cancelForm()">Cancel</button>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+        <!-- End Form -->
+    </div>
+
+    <script src="tambah_dokter.js"></script>
+</body>
+
+</html>

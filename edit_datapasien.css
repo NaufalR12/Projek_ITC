@@ -1,0 +1,172 @@
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Base styling */
+html,
+body {
+    font-family: "Kanit", sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+:root {
+    --cyan: #DFF3FC;
+    --birdong: rgb(54, 79, 107, 0.80);
+    --abu: #F5F5F5;
+    --pink: #FC5185;
+    --abu2: #D9D9D9;
+    --grey1: #333333;
+    --grey2: #4F4F4F;
+    --grey3: #828282;
+    --grey4: #BDBDBD;
+    --grey5: #E0E0E0;
+    --grey6: #7F8290;
+    --black: #000000;
+    --birumuda: #DFF3FC;
+    --red1: #FF0000;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.background-container {
+    height: 134vh;
+    width: 100vw;
+    background-image: url("./assets/BackgroundGedung.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding-left: 5rem;
+    background-color: rgb(54, 79, 107, 0.53);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo {
+    margin-top: 0.75rem;
+    margin-right: auto;
+}
+
+.navbar .navbar-logo img {
+    width: 75%;
+    height: auto;
+    padding: 0;
+    border-radius: 8px;
+}
+
+.kotakFormTambahDokter {
+    position: relative;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--birdong);
+    border-radius: 12px;
+    padding: 2rem 4rem 2rem 2rem;
+    width: 80%;
+    max-width: 600px;
+}
+
+.kotakFormTambahDokter .title {
+    text-align: left;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.label-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.label-input label {
+    margin-bottom: 0.5rem;
+    color: var(--black);
+}
+
+.label-input input,
+.label-input textarea,
+.label-input select {
+    padding: 0.75rem;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+input[type="password"],
+textarea {
+    width: 100%;
+}
+
+select {
+    width: 18.8rem;
+}
+
+textarea {
+    resize: none;
+    height: 50px;
+}
+
+.form-group-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.select {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.button-container {
+    position: absolute;
+    top: 50rem;
+    right: 6rem;
+    display: flex;
+    gap: 1rem;
+}
+
+button {
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button[type="button"] {
+    padding: 0.75rem 5rem;
+    background-color: var(--white);
+    color: var(--black);
+    font-weight: 600;
+    border: 0.5px solid black;
+}
+
+button[type="submit"] {
+    padding: 0.75rem 2.5rem;
+    background-color: var(--birdong);
+    color: var(--white);
+    font-weight: 600;
+}
