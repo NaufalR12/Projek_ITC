@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-html, body {
+html,
+body {
     font-family: "Kanit", sans-serif;
     height: 100%;
     width: 100%;
@@ -46,67 +47,110 @@ html, body {
 }
 
 .sidebar {
+    background-color: rgba(54, 79, 107, 0.8);
+    width: 260px;
+    padding: 24px;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
     position: fixed;
-    left: 0;
-    width: 266px;
     height: 100%;
-    background: var(--birdong);
 }
 
-.sidebar .grupLogo {
-    width: 249px; 
-    height: 64.05px; 
-    left: 8px; 
-    top: 37px;
+.sidebar .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
-.sidebar .grupLogo .kotakLogo {
-    width: 249px; 
-    height: 64.05px; 
-    left: 8px; 
-    top: 37px; 
-    position: absolute; 
-    background: var(--cyan); 
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
-    border-radius: 8px; 
-}
-
-.sidebar .grupLogo img {
-    width: 249px; 
-    height: 49.62px; 
-    position: absolute;
-    left: 8px; 
-    top: 44.22px; 
-}
-
-.sidebar a {
-    display: block;
-    height: 100%;
+.sidebar .logo img {
     width: 100%;
-    line-height: 50px;
-    word-wrap: break-word;
-    font-size: 1.25rem;
+}
+
+.sidebar .main .list-item .deskripsi {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    color: var(--grey6);
+    /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+.sidebar .main .list-item .icon {
+    margin-right: 12px;
+}
+
+.sidebar .main .list-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 10px;
+    width: 212px;
+    box-sizing: border-box;
+    /* justify-content: center;
+      align-items: center; */
+}
+
+.sidebar .main .list-item a {
+    display: flex;
+    /* Membuat <a> menjadi kontainer flex */
+    align-items: center;
+    /* Memastikan item di dalam <a> tetap berada di tengah secara vertikal */
+    text-decoration: none;
+    /* Untuk menghapus garis bawah default pada tautan */
+}
+
+.sidebar .main .list-item .deskripsi:hover {
+    color: #fff;
+    transition: all ease-in 0.2s;
+}
+
+.sidebar .bottom .list-item .deskripsi {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1rem;
+    text-align: center;
     color: var(--grey6);
 }
 
-.sidebar a i {
-    color: var(--abu);
+.sidebar .bottom .list-item .icon {
+    margin-right: 12px;
 }
 
-.sidebar a:hover, .sidebar a.active {
-    color: var(--abu);
+.sidebar .bottom .list-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 10px;
+    width: 212px;
+    box-sizing: border-box;
+    /* justify-content: center;
+          align-items: center; */
 }
 
-.sidebar .menu {
+.sidebar .bottom .list-item a {
+    display: flex;
+    /* Membuat <a> menjadi kontainer flex */
+    align-items: center;
+    /* Memastikan item di dalam <a> tetap berada di tengah secara vertikal */
+    text-decoration: none;
+    /* Untuk menghapus garis bawah default pada tautan */
+}
+
+.sidebar .bottom .list-item .deskripsi:hover {
+    color: #fff;
+    transition: all ease-in 0.2s;
+}
+
+.sidebar .bottom {
     position: absolute;
-    left: 43px;
-    top: 150px;
-}
-
-.sidebar .bantuan {
-    position: absolute;
-    left: 43px;
-    bottom: 20px;
+    bottom: 0;
 }
 
 .ellips {
@@ -137,10 +181,11 @@ html, body {
     left: 315px;
 }
 
-.Menyapa, .kotakTambahData {
+.Menyapa,
+.kotakTambahData {
     background-color: var(--birdong);
     border-radius: 37px;
-    width: 960px; 
+    width: 960px;
     height: 354px;
 }
 
@@ -213,7 +258,8 @@ html, body {
     gap: 5px;
 }
 
-a .btnTambahDokter, a .btnTambahPasien {
+a .btnTambahDokter,
+a .btnTambahPasien {
     position: relative;
     top: 40px;
     background-color: transparent;
@@ -224,7 +270,7 @@ a .btnTambahDokter, a .btnTambahPasien {
     cursor: pointer;
 }
 
-a  .btnTambahDokter {
+a .btnTambahDokter {
     background-image: url("./assets/btnTambahDokter.png");
     background-position: center;
     background-size: 230px;
@@ -238,11 +284,11 @@ a .btnTambahPasien {
     background-repeat: no-repeat;
 }
 
-a .btnTambahDokter:hover{
+a .btnTambahDokter:hover {
     background-image: url("./assets/hoverBtnTambahDokter.png");
 }
 
-a .btnTambahPasien:hover{
+a .btnTambahPasien:hover {
     background-image: url("./assets/hoverBtnTambahPasien.png");
 }
 
@@ -251,7 +297,8 @@ a .btnTambahDokter {
     margin-left: 40px;
 }
 
-.textDokter, .textPasien {
+.textDokter,
+.textPasien {
     position: relative;
     top: 15px;
     font-weight: 600;
